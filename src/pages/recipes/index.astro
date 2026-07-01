@@ -1,0 +1,55 @@
+---
+import Base from '../../layouts/Base.astro';
+import { recipes } from '../../lib/data';
+
+const stations = [...new Set(recipes.map((r) => r.station).filter(Boolean))].sort();
+const sorted = [...recipes].sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<Base title="Recipes — Pokompanion" active="recipes" description="Crafting recipes for Pokémon Pokopia — ingredients, stations and unlocks.">
+  <h1>Recipes</h1>
+  <p class="lede">What to craft, where, and from which ingredients.</p>
+
+  <div class="controls">
+    <input type="search" id="q" placeholder="Filter recipes…" aria-label="Filter recipes" />
+    <select id="cat" aria-label="Filter by station">
+      <option value="">All stations</option>
+      {stations.map((s) => <option value={s}>{s}</option>)}
+    </select>
+    <span class="count-note" id="count">{sorted.length} recipes</span>
+  </div>
+
+  <div class="grid" id="list">
+    {sorted.map((r) => (
+      <a class="card" href={`/recipes/${r.id}`} data-name={r.name.toLowerCase()} data-cat={r.station ?? ''}>
+        <h3>{r.name} {r.station && <span class="pill sky">{r.station}</span>}</h3>
+        <p>{(r.ingredients?.length ?? 0)} ingredient{(r.ingredients?.length ?? 0) === 1 ? '' : 's'}{r.unlock ? ` · ${r.unlock}` : ''}</p>
+      </a>
+    ))}
+  </div>
+  <p class="empty" id="noresults" hidden>No recipes match your filter.</p>
+
+  <script is:inline>
+    (() => {
+      const q = document.getElementById('q');
+      const cat = document.getElementById('cat');
+      const cards = [...document.querySelectorAll('#list .card')];
+      const count = document.getElementById('count');
+      const none = document.getElementById('noresults');
+      function apply() {
+        const term = q.value.trim().toLowerCase();
+        const c = cat.value;
+        let shown = 0;
+        for (const el of cards) {
+          const ok = (!term || el.dataset.name.includes(term)) && (!c || el.dataset.cat === c);
+          el.hidden = !ok;
+          if (ok) shown++;
+        }
+        count.textContent = shown + ' recipe' + (shown === 1 ? '' : 's');
+        none.hidden = shown !== 0;
+      }
+      q.addEventListener('input', apply);
+      cat.addEventListener('change', apply);
+    })();
+  </script>
+</Base>

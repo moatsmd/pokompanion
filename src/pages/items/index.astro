@@ -1,0 +1,55 @@
+---
+import Base from '../../layouts/Base.astro';
+import { items } from '../../lib/data';
+
+const categories = [...new Set(items.map((i) => i.category).filter(Boolean))].sort();
+const sorted = [...items].sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<Base title="Items — Pokompanion" active="items" description="Furniture, decor, kits, food and collectibles in Pokémon Pokopia.">
+  <h1>Items</h1>
+  <p class="lede">Furniture, decor, building kits, food and collectibles.</p>
+
+  <div class="controls">
+    <input type="search" id="q" placeholder="Filter items…" aria-label="Filter items" />
+    <select id="cat" aria-label="Filter by category">
+      <option value="">All categories</option>
+      {categories.map((c) => <option value={c}>{c}</option>)}
+    </select>
+    <span class="count-note" id="count">{sorted.length} items</span>
+  </div>
+
+  <div class="grid" id="list">
+    {sorted.map((it) => (
+      <a class="card" href={`/items/${it.id}`} data-name={it.name.toLowerCase()} data-cat={it.category ?? ''}>
+        <h3>{it.name} {it.category && <span class="pill clay">{it.category}</span>}</h3>
+        <p>{it.description ?? (it.obtain ? `Obtain: ${it.obtain}.` : 'Item.')}</p>
+      </a>
+    ))}
+  </div>
+  <p class="empty" id="noresults" hidden>No items match your filter.</p>
+
+  <script is:inline>
+    (() => {
+      const q = document.getElementById('q');
+      const cat = document.getElementById('cat');
+      const cards = [...document.querySelectorAll('#list .card')];
+      const count = document.getElementById('count');
+      const none = document.getElementById('noresults');
+      function apply() {
+        const term = q.value.trim().toLowerCase();
+        const c = cat.value;
+        let shown = 0;
+        for (const el of cards) {
+          const ok = (!term || el.dataset.name.includes(term)) && (!c || el.dataset.cat === c);
+          el.hidden = !ok;
+          if (ok) shown++;
+        }
+        count.textContent = shown + ' item' + (shown === 1 ? '' : 's');
+        none.hidden = shown !== 0;
+      }
+      q.addEventListener('input', apply);
+      cat.addEventListener('change', apply);
+    })();
+  </script>
+</Base>

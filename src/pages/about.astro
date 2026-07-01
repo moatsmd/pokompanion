@@ -1,0 +1,46 @@
+---
+import Base from '../layouts/Base.astro';
+import { sources, counts } from '../lib/data';
+
+const allSources = [...new Set(Object.values(sources).flat())].sort();
+---
+
+<Base title="About & sources — Pokompanion" description="About Pokompanion and the community sources its data is drawn from.">
+  <h1>About &amp; sources</h1>
+  <p class="lede">
+    Pokompanion is an unofficial, fan-made compendium for <em>Pokémon Pokopia</em>
+    (Nintendo Switch 2, 2026). It currently catalogs {counts.materials} materials,
+    {counts.items} items, {counts.recipes} recipes, {counts.habitats} habitats,
+    {counts.pokemon} Pokémon, {counts.tips} efficiency tips and {counts.regions} regions.
+  </p>
+
+  <div class="panel">
+    <h2>How the data was gathered</h2>
+    <p>
+      Factual game data — item names, sourcing methods, recipe ingredients and
+      region resources — was aggregated from public community wikis and written
+      in our own words. No prose or images were copied. If you spot an error,
+      the underlying data lives in plain JSON and is easy to correct.
+    </p>
+  </div>
+
+  <div class="panel">
+    <h2>Community sources</h2>
+    {allSources.length ? (
+      <ul>
+        {allSources.map((u) => <li><a href={u} rel="nofollow noopener" target="_blank">{u}</a></li>)}
+      </ul>
+    ) : (
+      <p class="empty">Sources will be listed here once data is loaded.</p>
+    )}
+  </div>
+
+  <div class="panel">
+    <h2>Disclaimer</h2>
+    <p>
+      Not affiliated with, endorsed by, or sponsored by Nintendo, Game Freak, or
+      The Pokémon Company. <em>Pokémon</em> and <em>Pokopia</em> are trademarks of
+      their respective owners. This is a non-commercial fan project.
+    </p>
+  </div>
+</Base>

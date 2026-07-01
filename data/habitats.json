@@ -1,0 +1,951 @@
+{
+  "_sources": [
+    "https://game8.co/games/Pokemon-Pokopia/archives/582463",
+    "https://bulbapedia.bulbagarden.net/wiki/Habitat_Dex",
+    "https://www.nintendolife.com/guides/pokemon-pokopia-complete-pokedex-all-pokemon-habitats",
+    "https://www.serebii.net/pokemonpokopia/habitats.shtml",
+    "https://pokopiamap.com/habitat",
+    "https://rankedboost.com/pokopia/guides/how-to-attract-pokemon/"
+  ],
+  "habitats": [
+    {
+      "id": "tall-grass",
+      "name": "Tall Grass",
+      "biome": "grassland",
+      "description": "The simplest habitat in the game: four tufts of tall grass bunched close together, enough to welcome some of the earliest Pokémon partners.",
+      "requirements": [
+        { "item": "tall-grass", "qty": 4, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Bulbasaur", "note": "Common" },
+        { "pokemon": "Charmander", "note": "Common" },
+        { "pokemon": "Charizard", "note": "Very rare" },
+        { "pokemon": "Squirtle", "note": "Common" },
+        { "pokemon": "Oddish", "note": "Common" },
+        { "pokemon": "Geodude", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "tree-shaded-tall-grass",
+      "name": "Tree-Shaded Tall Grass",
+      "biome": "forest",
+      "description": "Tall grass grown in the cool shade of a large tree, a favorite hiding spot for Bug- and Bug/Fighting-type Pokémon.",
+      "requirements": [
+        { "item": "tall-grass", "qty": 4, "note": null },
+        { "item": "large-tree", "qty": 1, "note": "any large tree" }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Bellsprout", "note": "Common" },
+        { "pokemon": "Scyther", "note": "Common" },
+        { "pokemon": "Scizor", "note": "Common" },
+        { "pokemon": "Pinsir", "note": "Rare" },
+        { "pokemon": "Heracross", "note": "Rare" }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "boulder-shaded-tall-grass",
+      "name": "Boulder-Shaded Tall Grass",
+      "biome": "grassland",
+      "description": "Tall grass planted beside a large boulder, giving Fighting-type Pokémon a sparring spot with natural cover.",
+      "requirements": [
+        { "item": "tall-grass", "qty": 4, "note": null },
+        { "item": "large-boulder", "qty": 1, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Timburr", "note": "Common" },
+        { "pokemon": "Gurdurr", "note": "Rare" },
+        { "pokemon": "Machop", "note": "Common" }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "hydrated-tall-grass",
+      "name": "Hydrated Tall Grass",
+      "biome": "water",
+      "description": "Tall grass kept damp by two placed pools of water, coaxing Water-type Pokémon out of the reeds and into the open.",
+      "requirements": [
+        { "item": "tall-grass", "qty": 4, "note": null },
+        { "item": "fresh-water", "qty": 2, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Squirtle", "note": null },
+        { "pokemon": "Wartortle", "note": null },
+        { "pokemon": "Blastoise", "note": null },
+        { "pokemon": "Sliggoo", "note": null },
+        { "pokemon": "Cramorant", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "seaside-tall-grass",
+      "name": "Seaside Tall Grass",
+      "biome": "beach",
+      "description": "Tall grass planted at the ocean's edge, blending a coastal saltwater habitat with an inland one.",
+      "requirements": [
+        { "item": "tall-grass", "qty": 4, "note": null },
+        { "item": "ocean-water", "qty": 2, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Slowpoke", "note": null },
+        { "pokemon": "Slowbro", "note": null },
+        { "pokemon": "Slowking", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "elevated-tall-grass",
+      "name": "Elevated Tall Grass",
+      "biome": "grassland",
+      "description": "Tall grass grown on high ground, appealing to early-bird Pokémon that like a lookout over the surrounding area.",
+      "requirements": [
+        { "item": "tall-grass", "qty": 4, "note": null },
+        { "item": "high-up-location", "qty": 1, "note": "built on elevated terrain rather than a placeable object" }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Pidgey", "note": null },
+        { "pokemon": "Pidgeotto", "note": null },
+        { "pokemon": "Hoothoot", "note": null },
+        { "pokemon": "Noctowl", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "illuminated-tall-grass",
+      "name": "Illuminated Tall Grass",
+      "biome": "grassland",
+      "description": "Tall grass lit by a nearby light source, luring nocturnal bug Pokémon that are drawn to the glow after dark.",
+      "requirements": [
+        { "item": "tall-grass", "qty": 4, "note": null },
+        { "item": "lighting", "qty": 1, "note": "any light source" }
+      ],
+      "conditions": "Night",
+      "attracts": [
+        { "pokemon": "Venonat", "note": null },
+        { "pokemon": "Venomoth", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "pretty-flower-bed",
+      "name": "Pretty Flower Bed",
+      "biome": "flower",
+      "description": "A modest bed of wildflowers that quickly becomes a stopover for small, cheerful Pokémon.",
+      "requirements": [
+        { "item": "wildflowers", "qty": 4, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Pidgey", "note": null },
+        { "pokemon": "Pidgeotto", "note": null },
+        { "pokemon": "Hoothoot", "note": null },
+        { "pokemon": "Combee", "note": null },
+        { "pokemon": "Magby", "note": null },
+        { "pokemon": "Eevee", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "tree-shaded-flower-bed",
+      "name": "Tree-Shaded Flower Bed",
+      "biome": "flower",
+      "description": "Wildflowers blooming beneath a fruiting berry tree, their damp night-time scent drawing in shier Pokémon.",
+      "requirements": [
+        { "item": "wildflowers", "qty": 4, "note": null },
+        { "item": "berry-tree", "qty": 1, "note": "any berry tree" }
+      ],
+      "conditions": "Night",
+      "attracts": [
+        { "pokemon": "Cacturne", "note": null },
+        { "pokemon": "Goomy", "note": null },
+        { "pokemon": "Vikavolt", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "hydrated-flower-bed",
+      "name": "Hydrated Flower Bed",
+      "biome": "flower",
+      "description": "A flower bed kept moist by two pools of water, attracting small Bug-type Pokémon that flit between the blossoms.",
+      "requirements": [
+        { "item": "wildflowers", "qty": 4, "note": null },
+        { "item": "fresh-water", "qty": 2, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Volbeat", "note": null },
+        { "pokemon": "Illumise", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "field-of-flowers",
+      "name": "Field of Flowers",
+      "biome": "flower",
+      "description": "A sprawling, double-sized flower bed large enough to host entire hives and bigger Grass-type Pokémon.",
+      "requirements": [
+        { "item": "wildflowers", "qty": 8, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Ivysaur", "note": null },
+        { "pokemon": "Venusaur", "note": null },
+        { "pokemon": "Vespiquen", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "elevated-flower-bed",
+      "name": "Elevated Flower Bed",
+      "biome": "flower",
+      "description": "Wildflowers planted on raised ground, favored by mushroom-headed Pokémon that prefer height.",
+      "requirements": [
+        { "item": "wildflowers", "qty": 4, "note": null },
+        { "item": "high-up-location", "qty": 1, "note": "built on elevated terrain rather than a placeable object" }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Paras", "note": null },
+        { "pokemon": "Parasect", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "grave-with-flowers",
+      "name": "Grave with Flowers",
+      "biome": "flower",
+      "description": "A weathered gravestone softened by a bed of wildflowers, a quiet spot that appeals to Ground-type Pokémon paying their respects.",
+      "requirements": [
+        { "item": "wildflowers", "qty": 4, "note": null },
+        { "item": "gravestone", "qty": 1, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Cubone", "note": null },
+        { "pokemon": "Marowak", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "flower-garden",
+      "name": "Flower Garden",
+      "biome": "flower",
+      "description": "Wildflowers boxed in by hedges on every side, giving the plot a tended, ornamental garden feel.",
+      "requirements": [
+        { "item": "hedge", "qty": 4, "note": "any hedge style" },
+        { "item": "wildflowers", "qty": 4, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Paras", "note": null },
+        { "pokemon": "Parasect", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "fresh-veggie-field",
+      "name": "Fresh Veggie Field",
+      "biome": "grassland",
+      "description": "A large planted vegetable field left semi-wild, appealing to Pokémon that like to dig through loose, tilled soil.",
+      "requirements": [
+        { "item": "vegetable-field", "qty": 8, "note": "any vegetable crop" }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Drilbur", "note": null },
+        { "pokemon": "Excadrill", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "riding-warm-updrafts",
+      "name": "Riding Warm Updrafts",
+      "biome": "fire",
+      "description": "Three lit campfires clustered together, their combined heat producing a column of rising warm air that floating Pokémon love to ride.",
+      "requirements": [
+        { "item": "campfire", "qty": 3, "note": "must be lit" }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Drifloon", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "campsite",
+      "name": "Campsite",
+      "biome": "fire",
+      "description": "A straw table and stool set beside a lit campfire, recreating the cozy feel of an overnight camp.",
+      "requirements": [
+        { "item": "straw-table", "qty": 1, "note": null },
+        { "item": "straw-stool", "qty": 1, "note": null },
+        { "item": "campfire", "qty": 1, "note": "must be lit" }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Charmeleon", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "training-waterfall",
+      "name": "Training Waterfall",
+      "biome": "water",
+      "description": "A single seat placed beside a waterfall and pooled water, built for Pokémon that like to train against a strong current.",
+      "requirements": [
+        { "item": "seat", "qty": 1, "note": "any seat" },
+        { "item": "fresh-water", "qty": 2, "note": null },
+        { "item": "waterfall", "qty": 1, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Tyrogue", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "picnic-set",
+      "name": "Picnic Set",
+      "biome": "other",
+      "description": "A packed picnic basket laid across a table with two seats, an inviting rest stop for playful Pokémon.",
+      "requirements": [
+        { "item": "picnic-basket", "qty": 1, "note": null },
+        { "item": "seat", "qty": 2, "note": "any seat" },
+        { "item": "table", "qty": 1, "note": "any table" }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Pichu", "note": null },
+        { "pokemon": "Pikachu", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "fishing-pond",
+      "name": "Fishing Pond",
+      "biome": "water",
+      "description": "The simplest fishing setup in the game: a rod, a seat, and a single body of fresh water, enough to lure patient Water-type Pokémon.",
+      "requirements": [
+        { "item": "fishing-rod", "qty": 1, "note": null },
+        { "item": "seat", "qty": 1, "note": "any seat" },
+        { "item": "fresh-water", "qty": 1, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Slowbro", "note": null },
+        { "pokemon": "Slowking", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "ocean-fishing-spot",
+      "name": "Ocean Fishing Spot",
+      "biome": "water",
+      "description": "The same rod-and-seat fishing setup, but cast into ocean water instead of fresh water, drawing saltwater Pokémon.",
+      "requirements": [
+        { "item": "fishing-rod", "qty": 1, "note": null },
+        { "item": "seat", "qty": 1, "note": "any seat" },
+        { "item": "ocean-water", "qty": 1, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Magikarp", "note": "Common" },
+        { "pokemon": "Gastrodon", "note": "East Sea and West Sea forms" }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "marsh-fishing-spot",
+      "name": "Marsh Fishing Spot",
+      "biome": "water",
+      "description": "A fishing spot set over muddy marsh water rather than clean water, favored by Pokémon that thrive in the muck.",
+      "requirements": [
+        { "item": "fishing-rod", "qty": 1, "note": null },
+        { "item": "seat", "qty": 1, "note": "any seat" },
+        { "item": "muddy-water", "qty": 1, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Grimer", "note": null },
+        { "pokemon": "Muk", "note": null },
+        { "pokemon": "Clodsire", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "hot-spring-fishing-spot",
+      "name": "Hot-Spring Fishing Spot",
+      "biome": "water",
+      "description": "A fishing rod cast into a pool of hot-spring water instead of a plain pond, appealing to Pokémon that enjoy warm water.",
+      "requirements": [
+        { "item": "fishing-rod", "qty": 1, "note": null },
+        { "item": "seat", "qty": 1, "note": "any seat" },
+        { "item": "hot-spring-water", "qty": 1, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Lotad", "note": null },
+        { "pokemon": "Lombre", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "magma-fishing-spot",
+      "name": "Magma Fishing Spot",
+      "biome": "fire",
+      "description": "A fishing rod set beside a pool of open lava rather than water, for the rare Pokémon hardy enough to swim in it.",
+      "requirements": [
+        { "item": "fishing-rod", "qty": 1, "note": null },
+        { "item": "seat", "qty": 1, "note": "any seat" },
+        { "item": "lava", "qty": 1, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Arcanine", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "shaded-beach",
+      "name": "Shaded Beach",
+      "biome": "beach",
+      "description": "A beach chair tucked beneath a large palm tree, using its fronds as a natural parasol.",
+      "requirements": [
+        { "item": "large-palm-tree", "qty": 1, "note": null },
+        { "item": "beach-chair", "qty": 1, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Exeggcute", "note": null },
+        { "pokemon": "Exeggutor", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "tropical-seaside",
+      "name": "Tropical Seaside",
+      "biome": "beach",
+      "description": "A palm tree and a ring of hedges framing open ocean water, built to feel like a private tropical cove.",
+      "requirements": [
+        { "item": "large-palm-tree", "qty": 1, "note": null },
+        { "item": "hedge", "qty": 4, "note": "any hedge style" },
+        { "item": "ocean-water", "qty": 2, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Lapras", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "beach-set",
+      "name": "Beach Set",
+      "biome": "beach",
+      "description": "A full beach lounging setup of chair, parasol, and side table for Pokémon that like to relax by the shore.",
+      "requirements": [
+        { "item": "beach-chair", "qty": 1, "note": null },
+        { "item": "beach-parasol", "qty": 1, "note": null },
+        { "item": "side-table", "qty": 1, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Tatsugiri", "note": "Curly, Droopy, and Stretchy forms all reported" }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "tropical-vibes",
+      "name": "Tropical Vibes",
+      "biome": "beach",
+      "description": "Seashore flowers planted beneath a palm tree, pairing the two most tropical-looking decorations in the game.",
+      "requirements": [
+        { "item": "seashore-flowers", "qty": 4, "note": null },
+        { "item": "large-palm-tree", "qty": 1, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Gloom", "note": null },
+        { "pokemon": "Exeggcute", "note": null },
+        { "pokemon": "Exeggutor", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "breezy-flower-bed",
+      "name": "Breezy Flower Bed",
+      "biome": "beach",
+      "description": "A bed of seashore flowers left open to the wind, drawing in trickster Pokémon that seem to like the breeze.",
+      "requirements": [
+        { "item": "seashore-flowers", "qty": 4, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Zorua", "note": null },
+        { "pokemon": "Zoroark", "note": null },
+        { "pokemon": "Pawmi", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "windy-flower-bed",
+      "name": "Windy Flower Bed",
+      "biome": "beach",
+      "description": "Seashore flowers planted next to a working windmill, the constant breeze appealing to seafaring bird Pokémon.",
+      "requirements": [
+        { "item": "seashore-flowers", "qty": 4, "note": null },
+        { "item": "windmill-kit", "qty": 1, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Wingull", "note": null },
+        { "pokemon": "Pelipper", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "smooth-tall-grass",
+      "name": "Smooth Tall Grass",
+      "biome": "cave",
+      "description": "Dry tall grass wilting beside a strangely smooth rock that seems to be draining the life out of the surrounding plants.",
+      "requirements": [
+        { "item": "dry-tall-grass", "qty": 4, "note": null },
+        { "item": "smooth-rock", "qty": 1, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Onix", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "mossy-rest-spot",
+      "name": "Mossy Rest Spot",
+      "biome": "cave",
+      "description": "A patch of thick, damp moss with no other decoration needed, comfortable enough for rock-hard Pokémon to nap on.",
+      "requirements": [
+        { "item": "moss", "qty": 4, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Larvitar", "note": null },
+        { "pokemon": "Tyranitar", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "mossy-boulder",
+      "name": "Mossy Boulder",
+      "biome": "cave",
+      "description": "A single mossy boulder surrounded by more loose moss, a quiet corner favored by heavyweight Rock-type Pokémon.",
+      "requirements": [
+        { "item": "moss", "qty": 4, "note": null },
+        { "item": "mossy-boulder", "qty": 1, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Graveler", "note": null },
+        { "pokemon": "Golem", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "creepy-white-rocks",
+      "name": "Creepy White Rocks",
+      "biome": "cave",
+      "description": "Pale stalagmites wrapped in moss and lit by a single lantern beside a crate, giving the cave a faintly eerie glow.",
+      "requirements": [
+        { "item": "stalagmites", "qty": 1, "note": null },
+        { "item": "moss", "qty": 4, "note": null },
+        { "item": "wooden-crate", "qty": 1, "note": null },
+        { "item": "lantern", "qty": 1, "note": "powered" }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Glimmet", "note": null },
+        { "pokemon": "Glimmora", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "piping-hot-lava",
+      "name": "Piping-Hot Lava",
+      "biome": "fire",
+      "description": "A stretch of open lava beside a chunk of molten rock, radiating heat that only the hardiest Fire-type Pokémon tolerate.",
+      "requirements": [
+        { "item": "molten-rock", "qty": 1, "note": null },
+        { "item": "lava", "qty": 2, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Charcadet", "note": null },
+        { "pokemon": "Volcarona", "note": null }
+      ],
+      "region": null,
+      "notes": "Sources disagree slightly on the full attracted list for this habitat; Charcadet and Volcarona are the entries that recur across independently-fetched guides."
+    },
+    {
+      "id": "nine-flames",
+      "name": "Nine Flames",
+      "biome": "fire",
+      "description": "Nine lit firepits arranged together, their swaying flames said to draw in the most fox-like of Fire-type Pokémon.",
+      "requirements": [
+        { "item": "firepit", "qty": 9, "note": "must be lit" }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Ninetales", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "furnace-spot",
+      "name": "Furnace Spot",
+      "biome": "fire",
+      "description": "A metal drum set beside a working furnace, giving off the kind of industrial heat that Fire-type Pokémon are drawn to.",
+      "requirements": [
+        { "item": "metal-drum", "qty": 1, "note": null },
+        { "item": "furnace", "qty": 1, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Combusken", "note": null },
+        { "pokemon": "Blaziken", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "fireplace-nap-spot",
+      "name": "Fireplace Nap Spot",
+      "biome": "fire",
+      "description": "A lit stone fireplace next to a wide seat, a warm corner for Pokémon that like to doze by the fire.",
+      "requirements": [
+        { "item": "stone-fireplace", "qty": 1, "note": "must be lit" },
+        { "item": "seat", "qty": 1, "note": "wide seat" }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Cyndaquil", "note": null },
+        { "pokemon": "Quilava", "note": null },
+        { "pokemon": "Typhlosion", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "yellow-tall-grass",
+      "name": "Yellow Tall Grass",
+      "biome": "grassland",
+      "description": "A coastal-colored variant of tall grass with a yellow tint, distinct from the standard green tufts found elsewhere.",
+      "requirements": [
+        { "item": "yellow-tall-grass", "qty": 4, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Spinarak", "note": null },
+        { "pokemon": "Ariados", "note": null },
+        { "pokemon": "Grubbin", "note": null }
+      ],
+      "region": "bleak-beach",
+      "notes": "Region inferred from the grass's coastal color theme and the beach/water Pokémon documented alongside its shaded/hydrated variants; not explicitly confirmed as a build-location restriction by sourced guides."
+    },
+    {
+      "id": "red-tall-grass",
+      "name": "Red Tall Grass",
+      "biome": "grassland",
+      "description": "A deep red variant of tall grass associated with rocky, mountainous terrain rather than open plains.",
+      "requirements": [
+        { "item": "red-tall-grass", "qty": 4, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Kricketot", "note": null },
+        { "pokemon": "Kricketune", "note": null },
+        { "pokemon": "Riolu", "note": null },
+        { "pokemon": "Scorbunny", "note": null },
+        { "pokemon": "Cinderace", "note": null }
+      ],
+      "region": "rocky-ridges",
+      "notes": "Region inferred from the grass's valley/mountain color theme and rock-adjacent variants (e.g. Pointy Tree-Shaded Rocky Tall Grass); not explicitly confirmed as a build-location restriction by sourced guides."
+    },
+    {
+      "id": "pink-tall-grass",
+      "name": "Pink Tall Grass",
+      "biome": "grassland",
+      "description": "A soft pink variant of tall grass associated with the floating Sparkling Skylands, growing alongside dragon- and flying-type Pokémon.",
+      "requirements": [
+        { "item": "pink-tall-grass", "qty": 4, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Trapinch", "note": null },
+        { "pokemon": "Swablu", "note": null },
+        { "pokemon": "Duskull", "note": null },
+        { "pokemon": "Vibrava", "note": null },
+        { "pokemon": "Flygon", "note": null }
+      ],
+      "region": "sparkling-skylands",
+      "notes": "Region inferred from the grass's skyland color theme and its elevated/hydrated variants' dragon- and flying-type Pokémon; not explicitly confirmed as a build-location restriction by sourced guides."
+    },
+    {
+      "id": "trash-collection-site",
+      "name": "Trash Collection Site",
+      "biome": "urban",
+      "description": "A pile of bagged garbage beside a waste bin and sign, an unglamorous spot that Poison-type Pokémon find irresistible.",
+      "requirements": [
+        { "item": "waste-bin", "qty": 1, "note": "any waste bin" },
+        { "item": "sign", "qty": 1, "note": "any sign" },
+        { "item": "garbage-bags", "qty": 1, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Koffing", "note": null },
+        { "pokemon": "Weezing", "note": null },
+        { "pokemon": "Trubbish", "note": null },
+        { "pokemon": "Garbodor", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "trash-can-central",
+      "name": "Trash Can Central",
+      "biome": "urban",
+      "description": "Four garbage bins lined up together, humming faintly with the static that Electric-type Pokémon are drawn to.",
+      "requirements": [
+        { "item": "garbage-bin", "qty": 4, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Magneton", "note": null },
+        { "pokemon": "Magnezone", "note": null },
+        { "pokemon": "Electabuzz", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "factory-storage",
+      "name": "Factory Storage",
+      "biome": "urban",
+      "description": "A streetlight, a tangle of cords, and an idle metal drum stacked beside a broken control unit, evoking an abandoned factory floor.",
+      "requirements": [
+        { "item": "streetlight", "qty": 1, "note": "powered" },
+        { "item": "control-unit", "qty": 1, "note": null },
+        { "item": "metal-drum", "qty": 1, "note": null },
+        { "item": "jumbled-cords", "qty": 1, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Magnemite", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "gently-lit-bed",
+      "name": "Gently Lit Bed",
+      "biome": "other",
+      "description": "A bed and table lit by a single candle, calm enough to draw in Pokémon that fly by night.",
+      "requirements": [
+        { "item": "bed", "qty": 1, "note": "any bed" },
+        { "item": "table", "qty": 1, "note": "any table" },
+        { "item": "slender-candle", "qty": 1, "note": "must be lit" }
+      ],
+      "conditions": "Night",
+      "attracts": [
+        { "pokemon": "Hoothoot", "note": null },
+        { "pokemon": "Noctowl", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "grave-offering",
+      "name": "Grave Offering",
+      "biome": "other",
+      "description": "A gravestone with two lit candles and a plate of food set before it, a small memorial offering.",
+      "requirements": [
+        { "item": "gravestone", "qty": 1, "note": null },
+        { "item": "slender-candle", "qty": 2, "note": "must be lit" },
+        { "item": "plated-food", "qty": 1, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Litwick", "note": null },
+        { "pokemon": "Lampent", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "creepy-grave-offering",
+      "name": "Creepy Grave Offering",
+      "biome": "other",
+      "description": "The same graveside offering as Grave Offering, but lit with eerie blue-flamed candles instead of plain ones, drawing a rarer Ghost-type visitor.",
+      "requirements": [
+        { "item": "gravestone", "qty": 1, "note": null },
+        { "item": "eerie-candle", "qty": 2, "note": "must be lit" },
+        { "item": "plated-food", "qty": 1, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Litwick", "note": null },
+        { "pokemon": "Lampent", "note": null },
+        { "pokemon": "Chandelure", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "bed-with-a-plush",
+      "name": "Bed with a Plush",
+      "biome": "other",
+      "description": "A bed with a single plush doll tucked in beside it, cozy enough for balloon Pokémon and sleepy Pokémon alike.",
+      "requirements": [
+        { "item": "bed", "qty": 1, "note": "any bed" },
+        { "item": "doll", "qty": 1, "note": "any doll" }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Drifloon", "note": null },
+        { "pokemon": "Munchlax", "note": null },
+        { "pokemon": "Slowbro", "note": null },
+        { "pokemon": "Slowking", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "lumberjacks-workplace",
+      "name": "Lumberjack's Workplace",
+      "biome": "forest",
+      "description": "A hauling cart, a set of log furniture, and a tree stump arranged like an active logging site.",
+      "requirements": [
+        { "item": "cart", "qty": 1, "note": null },
+        { "item": "log-chair", "qty": 1, "note": null },
+        { "item": "log-table", "qty": 1, "note": null },
+        { "item": "tree-stump", "qty": 1, "note": "any tree stump" }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Axew", "note": null },
+        { "pokemon": "Fraxure", "note": null },
+        { "pokemon": "Haxorus", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "cozy-log-handicrafts",
+      "name": "Cozy Log Handicrafts",
+      "biome": "forest",
+      "description": "A full set of log furniture, chair, table, and bed, carved straight from felled timber.",
+      "requirements": [
+        { "item": "log-chair", "qty": 1, "note": null },
+        { "item": "log-table", "qty": 1, "note": null },
+        { "item": "log-bed", "qty": 1, "note": null }
+      ],
+      "conditions": "",
+      "attracts": [
+        { "pokemon": "Axew", "note": null },
+        { "pokemon": "Fraxure", "note": null },
+        { "pokemon": "Haxorus", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "sunny-day-site",
+      "name": "Sunny Day Site",
+      "biome": "other",
+      "description": "A Castform Weather Charm set to Sun, placed beside a plate of food as an offering that calls in heat-loving Pokémon.",
+      "requirements": [
+        { "item": "castform-weather-charm", "qty": 2, "note": "set to Sun" },
+        { "item": "plated-food", "qty": 1, "note": null }
+      ],
+      "conditions": "Sunny",
+      "attracts": [
+        { "pokemon": "Cacnea", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "rain-dance-site",
+      "name": "Rain Dance Site",
+      "biome": "other",
+      "description": "A Castform Weather Charm set to Rain, placed beside a plate of food, luring in Pokémon that prefer wet conditions.",
+      "requirements": [
+        { "item": "castform-weather-charm", "qty": 2, "note": "set to Rain" },
+        { "item": "plated-food", "qty": 1, "note": null }
+      ],
+      "conditions": "Rain",
+      "attracts": [
+        { "pokemon": "Goomy", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    },
+    {
+      "id": "berry-feast-campsite",
+      "name": "Berry-Feast Campsite",
+      "biome": "fire",
+      "description": "A lit bonfire, a basket of berries, and a Sun-set weather charm arranged on high ground for a proper outdoor feast.",
+      "requirements": [
+        { "item": "castform-weather-charm", "qty": 2, "note": "set to Sun" },
+        { "item": "bonfire", "qty": 1, "note": "must be lit" },
+        { "item": "berry-basket", "qty": 1, "note": null },
+        { "item": "high-up-location", "qty": 1, "note": "built on elevated terrain rather than a placeable object" }
+      ],
+      "conditions": "Sunny",
+      "attracts": [
+        { "pokemon": "Charizard", "note": null }
+      ],
+      "region": null,
+      "notes": null
+    }
+  ]
+}

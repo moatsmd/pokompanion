@@ -1,0 +1,38 @@
+---
+import Base from '../../layouts/Base.astro';
+import { tips, tipsById, regionsById, resolveRef, prettify } from '../../lib/data';
+
+export function getStaticPaths() {
+  return tips.map((t) => ({ params: { id: t.id } }));
+}
+
+const { id } = Astro.params;
+const t = tipsById.get(id!)!;
+const relItems = (t.relatedItems ?? []).map(resolveRef);
+const relRegions = (t.relatedRegions ?? []).map((rid) => regionsById.get(rid)).filter(Boolean);
+---
+
+<Base title={`${t.title} — Pokompanion`} active="tips" description={t.summary ?? t.title}>
+  <p class="crumb"><a href="/tips">← Efficiency Tips</a></p>
+  <article data-pagefind-body>
+    <h1>{t.title}</h1>
+    <div class="chips">
+      {t.category && <span class="pill clay" data-pagefind-filter="category">{t.category}</span>}
+      <span class="pill" data-pagefind-filter="type">Tip</span>
+    </div>
+    {t.summary && <p class="lede">{t.summary}</p>}
+
+    {(t.body ?? []).map((para) => <p>{para}</p>)}
+
+    {relItems.length > 0 && (
+      <p><strong>Related:</strong> {relItems.map((r, i) => (<>{i > 0 && ', '}{r.href ? <a href={r.href}>{r.name}</a> : r.name}</>))}</p>
+    )}
+    {relRegions.length > 0 && (
+      <p><strong>Regions:</strong> {relRegions.map((r, i) => (<>{i > 0 && ', '}<a href={`/regions/${r!.id}`}>{r!.name}</a></>))}</p>
+    )}
+    {t.tags && t.tags.length > 0 && (
+      <div class="chips">{t.tags.map((tag) => <span class="pill">{prettify(tag)}</span>)}</div>
+    )}
+    {t.notes && <p class="uncertain">{t.notes}</p>}
+  </article>
+</Base>

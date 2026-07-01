@@ -1,0 +1,142 @@
+{
+  "_sources": [
+    "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Pokopia",
+    "https://game8.co/games/Pokemon-Pokopia/archives/582658",
+    "https://pokopiaguide.com/guides/ditto-moves-guide",
+    "https://pokopia.wiki.fextralife.com/How_to_Unlock_All_Ditto_Moves_and_Abilities",
+    "https://pokopia.wiki.fextralife.com/Moves",
+    "https://bulbapedia.bulbagarden.net/wiki/Ditto_(Pokopia)",
+    "https://game8.co/games/Pokemon-Pokopia/archives/590102",
+    "https://pokopiamap.com"
+  ],
+  "tools": [
+    {
+      "id": "cut",
+      "name": "Cut",
+      "pokemon": "Scyther",
+      "effect": "Cuts down trees, grass, and wooden debris to harvest wood and fiber materials.",
+      "unlockSummary": "Give Scyther 2 Sturdy Sticks in Withered Wasteland to learn Cut.",
+      "notes": null
+    },
+    {
+      "id": "rock-smash",
+      "name": "Rock Smash",
+      "pokemon": "Hitmonchan",
+      "effect": "Smashes rocks, ore blocks, and clay blocks to harvest stone, ore, and clay materials.",
+      "unlockSummary": "Give Hitmonchan 2 Stones in Withered Wasteland to learn Rock Smash.",
+      "notes": null
+    },
+    {
+      "id": "water-gun",
+      "name": "Water Gun",
+      "pokemon": "Squirtle",
+      "effect": "Sprays water to revive wilted plants and terrain, and to water crops.",
+      "unlockSummary": "Story tutorial: spray the collapsed Squirtle with Water Gun in Withered Wasteland.",
+      "notes": null
+    },
+    {
+      "id": "leafage",
+      "name": "Leafage",
+      "pokemon": "Bulbasaur",
+      "effect": "Grows patches of tall grass on suitable ground to build Pokémon habitats.",
+      "unlockSummary": "Complete Bulbasaur's request to water 10 dry grass patches with Water Gun in Withered Wasteland.",
+      "notes": null
+    },
+    {
+      "id": "rototiller",
+      "name": "Rototiller",
+      "pokemon": "Drilbur",
+      "effect": "Tills wet soil into farmable plots for planting.",
+      "unlockSummary": "Revive dried soil with Water Gun, then accept Drilbur's teaching in Withered Wasteland.",
+      "notes": "Also referred to as Cultivate in some guides."
+    },
+    {
+      "id": "jump",
+      "name": "Jump",
+      "pokemon": "Magikarp",
+      "effect": "Springs Ditto upward over single-tile gaps to cross islands and mountains.",
+      "unlockSummary": "Build an Ocean Fishing Spot habitat for Magikarp in Withered Wasteland.",
+      "notes": "Also referred to as Splash in some guides."
+    },
+    {
+      "id": "strength",
+      "name": "Strength",
+      "pokemon": "Machoke",
+      "effect": "Pushes and pulls boulders and heavy objects to clear paths and solve puzzles.",
+      "unlockSummary": "Complete training with Machoke after clearing stones in Rocky Ridges.",
+      "notes": null
+    },
+    {
+      "id": "rollout",
+      "name": "Rollout",
+      "pokemon": "Graveler",
+      "effect": "Transforms Ditto into a rolling Graveler for fast overland movement.",
+      "unlockSummary": "Befriend Graveler at its Mossy Boulder habitat in Rocky Ridges.",
+      "notes": null
+    },
+    {
+      "id": "surf",
+      "name": "Surf",
+      "pokemon": "Lapras",
+      "effect": "Lets Ditto glide across open water as Lapras.",
+      "unlockSummary": "Complete Lapras's request to clear 80 mud tiles in Bleak Beach.",
+      "notes": null
+    },
+    {
+      "id": "camouflage",
+      "name": "Camouflage",
+      "pokemon": "Zorua",
+      "effect": "Disguises Ditto as a nearby object for stealth and access to hidden spots.",
+      "unlockSummary": "Gift Zorua Toy Blocks after befriending it in Bleak Beach.",
+      "notes": "Also referred to as Mimic in some guides."
+    },
+    {
+      "id": "suck",
+      "name": "Suck",
+      "pokemon": "Paldean Wooper",
+      "effect": "Sucks up liquids such as water, mud, or magma to carry and deposit elsewhere.",
+      "unlockSummary": "Befriend Paldean Wooper and complete its request.",
+      "notes": "Also referred to as Water Absorb in some guides; exact unlock region is uncertain across sources."
+    },
+    {
+      "id": "glide",
+      "name": "Glide",
+      "pokemon": "Dragonite",
+      "effect": "Glides Ditto down from high places for aerial traversal.",
+      "unlockSummary": "Complete the Waterside Dinghy habitat and befriend Dragonite in Sparkling Skylands.",
+      "notes": null
+    },
+    {
+      "id": "waterfall",
+      "name": "Waterfall",
+      "pokemon": "Gyarados",
+      "effect": "Upgrades Surf to let Ditto climb waterfalls.",
+      "unlockSummary": "Give Gyarados a Bread Bowl in Sparkling Skylands.",
+      "notes": null
+    },
+    {
+      "id": "magnet-rise",
+      "name": "Magnet Rise",
+      "pokemon": "Magnemite",
+      "effect": "Lets Ditto hover in the air to reach and place blocks at height.",
+      "unlockSummary": "Build a Factory Storage habitat after completing all Important Requests (post-game).",
+      "notes": null
+    },
+    {
+      "id": "dive",
+      "name": "Dive",
+      "pokemon": null,
+      "effect": "Lets Ditto dive underwater to explore submerged areas.",
+      "unlockSummary": "Unlocked while exploring Bubbly Basin (August 2026 DLC area).",
+      "notes": "Teacher Pokémon not confirmed at time of writing (listed as TBA in guides)."
+    },
+    {
+      "id": "spit-up",
+      "name": "Spit Out",
+      "pokemon": null,
+      "effect": "Releases whatever Ditto is currently holding — a large item stored via Stockpile, or a liquid sucked up via Suck — and lets the player place it in the overworld.",
+      "unlockSummary": "Available innately alongside Stockpile from early on, not taught by a specific Pokémon.",
+      "notes": "Sourcing on this move is mixed and not fully resolved. Fextralife's Moves page and Bulbapedia describe 'Spit Out' as an innate ability paired with Stockpile, used to place large stored furniture/items ('likely based on Spit Up, an actual move that Ditto cannot learn' in the core series). Separately, Game8's Fresh Water guide describes an equivalent 'spit it out to make blocks of fresh water appear' action as part of the already-documented suck move (tools.json, taught by Paldean Wooper at Bleak Beach) for placing liquid blocks. This entry may therefore duplicate suck rather than being a fully distinct tool — flagging for reconciliation. Kept the id spit-up because it already appears in regions.json's bleak-beach entry (toolsUsedHere)."
+    }
+  ]
+}

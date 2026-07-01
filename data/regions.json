@@ -1,0 +1,247 @@
+{
+  "_sources": [
+    "https://pokopiamap.com/map",
+    "https://rankedboost.com/pokopia/locations/",
+    "https://pokopia.wiki.fextralife.com/Areas_&_Towns",
+    "https://www.videogameschronicle.com/guide/pokemon-pokopia-all-areas-and-how-to-unlock-them/",
+    "https://bulbapedia.bulbagarden.net/wiki/Withered_Wasteland",
+    "https://www.serebii.net/pokemonpokopia/locations/witheredwastelands.shtml",
+    "https://www.serebii.net/pokemonpokopia/locations/bleakbeach.shtml",
+    "https://www.serebii.net/pokemonpokopia/locations/rockyridges.shtml",
+    "https://www.serebii.net/pokemonpokopia/locations/sparklingskylands.shtml",
+    "https://www.serebii.net/pokemonpokopia/locations/palettetown.shtml",
+    "https://www.pokopiahub.com/guides/area-unlock-guide/",
+    "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Pokopia",
+    "https://pokemonpokopia.org/blog/pokemon-pokopia-gameplay-features-guide",
+    "https://pokopia.gamertw.com/"
+  ],
+  "regions": [
+    {
+      "id": "withered-wasteland",
+      "name": "Withered Wasteland",
+      "order": 1,
+      "summary": "Withered Wasteland is the drought-stricken stand-in for Fuchsia City and Pokopia's opening region, where Ditto meets Professor Tangrowth and starts coaxing rain back into a dead landscape. It doubles as the tutorial space, teaching the first handful of Pokémon-move tools and basic material gathering.",
+      "keyResources": [
+        "lumber",
+        "stone",
+        "vine-rope",
+        "leppa-berry",
+        "honey",
+        "copper-ore"
+      ],
+      "notableLocations": [
+        {
+          "name": "Professor Tangrowth's Home",
+          "what": "Southern cave where Ditto first meets its guide and finds a wheelbarrow of relics."
+        },
+        {
+          "name": "Wasteland Pokémon Center",
+          "what": "Ruined center that gets rebuilt into the region's healing/hub facility."
+        },
+        {
+          "name": "Team R's Hideout",
+          "what": "Rust-covered lighthouse hidden behind cracked sandstone, dispensing fake Gym Badges."
+        },
+        {
+          "name": "Mysterious Mural",
+          "what": "Wall of Unown-shaped tile slots used for a puzzle."
+        }
+      ],
+      "toolsUsedHere": [
+        "water-gun",
+        "leafage",
+        "cut",
+        "rock-smash",
+        "rototiller",
+        "jump"
+      ],
+      "connectsTo": [
+        "palette-town",
+        "bleak-beach",
+        "rocky-ridges",
+        "sparkling-skylands"
+      ],
+      "notes": null
+    },
+    {
+      "id": "palette-town",
+      "name": "Palette Town",
+      "order": 2,
+      "orderUncertain": true,
+      "summary": "Palette Town is Ditto's original home turf and Pokopia's dedicated free-build sandbox, reachable by a short bridge from Withered Wasteland. It carries none of the story's restoration urgency, serving instead as an open canvas for creative builds and as the game's multiplayer meeting ground.",
+      "keyResources": [
+        "sturdy-stick",
+        "stone",
+        "glowing-mushroom",
+        "sea-glass",
+        "seaweed",
+        "copper-ore",
+        "iron-ore",
+        "gold-ore"
+      ],
+      "notableLocations": [
+        {
+          "name": "Bridge to Withered Wasteland",
+          "what": "Main crossing connecting the sandbox area to the story regions."
+        },
+        {
+          "name": "Multiplayer Plot",
+          "what": "Shared building space used for Cloud Islands and co-op play with friends."
+        }
+      ],
+      "toolsUsedHere": [],
+      "connectsTo": [
+        "withered-wasteland"
+      ],
+      "notes": "Sources disagree on unlock timing: VGC and RankedBoost describe it as available right after the tutorial, while Pokopia Hub lists it as unlocking only after finishing every story region. Ordered here as early-accessible per the majority of sources; no region-exclusive tool/move was documented, so toolsUsedHere is empty."
+    },
+    {
+      "id": "bleak-beach",
+      "name": "Bleak Beach",
+      "order": 3,
+      "summary": "Bleak Beach reimagines Vermilion City as a permanently dark shoreline wrapped around the beached S.S. Anne, and restoring its power grid is the region's central hook. Once light and weather return, it becomes Pokopia's main source of coastal materials like clay, seashells, and sea glass.",
+      "keyResources": [
+        "soft-clay",
+        "seashell",
+        "sea-glass",
+        "twine",
+        "seaweed",
+        "honey"
+      ],
+      "notableLocations": [
+        {
+          "name": "S.S. Anne",
+          "what": "Beached ocean liner that anchors the region's story and exploration."
+        },
+        {
+          "name": "Harbor Docks",
+          "what": "Streetlight- and pole-lined dock area tied to the power-restoration quest."
+        }
+      ],
+      "toolsUsedHere": [
+        "surf",
+        "camouflage",
+        "spit-up"
+      ],
+      "connectsTo": [
+        "withered-wasteland",
+        "sparkling-skylands"
+      ],
+      "notes": "Unlocks alongside Rocky Ridges, both gated behind the same Withered Wasteland quest (\"Yawn Up a Storm\")."
+    },
+    {
+      "id": "rocky-ridges",
+      "name": "Rocky Ridges",
+      "order": 3,
+      "summary": "Rocky Ridges stands where Pewter City and Mt. Moon once were, a mineral-rich mountain region built around ore gathering, farming, and a deep mine shaft. Its surface layer favors stone and wheat-and-bean farming, while the mine below is covered separately as Rocky Ridges (Underground).",
+      "keyResources": [
+        "iron-ore",
+        "copper-ore",
+        "gold-ore",
+        "pokemetal-fragment",
+        "wheat",
+        "bean",
+        "stone"
+      ],
+      "notableLocations": [
+        {
+          "name": "Pewter Museum",
+          "what": "Former Pewter City museum that trades Rainbow Feathers for exclusive items."
+        },
+        {
+          "name": "Mine Entrance",
+          "what": "Shaft leading down into the region's underground layer."
+        },
+        {
+          "name": "Mine Cart Tracks",
+          "what": "Rail line used to move ore around the surface mining area."
+        }
+      ],
+      "toolsUsedHere": [
+        "strength",
+        "rollout"
+      ],
+      "connectsTo": [
+        "withered-wasteland",
+        "sparkling-skylands",
+        "rocky-ridges-underground"
+      ],
+      "notes": "Unlocks alongside Bleak Beach, both gated behind the same Withered Wasteland quest (\"Yawn Up a Storm\")."
+    },
+    {
+      "id": "rocky-ridges-underground",
+      "name": "Rocky Ridges (Underground)",
+      "order": 3,
+      "summary": "The underground layer of Rocky Ridges is the deep mine burrowing beneath the surface ridge, thick with ore veins and cave formations rather than farmland. It serves as the region's dedicated source of rarer minerals and cave-only materials like crystal clusters and glowing mushrooms.",
+      "keyResources": [
+        "copper-ore",
+        "iron-ore",
+        "gold-ore",
+        "pokemetal-fragment",
+        "cave-mushroom",
+        "glowing-mushroom"
+      ],
+      "notableLocations": [
+        {
+          "name": "Deep Mine",
+          "what": "Main cavern network descending from the surface mine entrance, dense with ore deposits, stalagmites, and crystal clusters."
+        }
+      ],
+      "toolsUsedHere": [],
+      "notesOnTools": "No move/tool was specifically documented for the underground layer (Rock Smash is used elsewhere for breaking obstacles but wasn't sourced for this area), so toolsUsedHere is left empty rather than assumed.",
+      "connectsTo": [
+        "rocky-ridges"
+      ],
+      "notes": "Treated as a distinct entry per pokopiamap.com's separate Surface/Underground map layers; access point is the surface region's mine entrance."
+    },
+    {
+      "id": "sparkling-skylands",
+      "name": "Sparkling Skylands",
+      "order": 4,
+      "summary": "Sparkling Skylands is Pokopia's late-game region, a shard of Celadon and Saffron City blasted skyward by the game's founding catastrophe and now floating above the clouds. Progress here centers on rebuilding Silph Co. and unlocks gliding traversal alongside the run's rarest ore and construction materials.",
+      "keyResources": [
+        "limestone",
+        "pokemetal-fragment",
+        "gold-ore",
+        "iron-ore",
+        "tomato",
+        "wheat",
+        "lumber"
+      ],
+      "notableLocations": [
+        {
+          "name": "Silph Co.",
+          "what": "Ruined corporate tower that becomes the region's central rebuilding project."
+        },
+        {
+          "name": "Abandoned City",
+          "what": "Skyward ruins of the former Celadon/Saffron sprawl surrounding the tower."
+        }
+      ],
+      "toolsUsedHere": [
+        "glide",
+        "waterfall",
+        "magnet-rise"
+      ],
+      "connectsTo": [
+        "withered-wasteland",
+        "bleak-beach",
+        "rocky-ridges",
+        "palette-town"
+      ],
+      "notes": "Serebii also lists a connection to 'Dream Islands,' which isn't documented elsewhere as a distinct region, so it was omitted from connectsTo pending confirmation."
+    },
+    {
+      "id": "bubbly-basin",
+      "name": "Bubbly Basin",
+      "order": 5,
+      "orderUncertain": true,
+      "summary": "Bubbly Basin is an announced downloadable-content region slated to arrive after launch, but at research time it had no live map data or confirmed resource list. It's included here only as a documented future addition to Pokopia's region roster.",
+      "keyResources": [],
+      "notableLocations": [],
+      "toolsUsedHere": [],
+      "connectsTo": [],
+      "notes": "Upcoming DLC region reported for August 2026 (per pokopiamap.com); not yet live/explorable at time of writing, so resource, location, and connection fields are empty pending release rather than guessed."
+    }
+  ]
+}

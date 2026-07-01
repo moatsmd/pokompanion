@@ -1,0 +1,83 @@
+---
+import Base from '../../layouts/Base.astro';
+import { items, itemsById, regionsById, recipeForItem, resolveRef, habitatsRequiring, tipsRelatedTo, prettify } from '../../lib/data';
+
+export function getStaticPaths() {
+  return items.map((it) => ({ params: { id: it.id } }));
+}
+
+const { id } = Astro.params;
+const it = itemsById.get(id!)!;
+const recipe = recipeForItem(it);
+const region = it.region ? regionsById.get(it.region) : null;
+const inHabitats = habitatsRequiring(it.id);
+const relatedTips = tipsRelatedTo(it.id);
+---
+
+<Base title={`${it.name} — Pokompanion`} active="items" description={it.description ?? `${it.name} in Pokémon Pokopia.`}>
+  <p class="crumb"><a href="/items">← Items</a></p>
+  <article data-pagefind-body>
+    <h1>{it.name}</h1>
+    <div class="chips">
+      {it.category && <span class="pill clay" data-pagefind-filter="category">{it.category}</span>}
+      {it.obtain && <span class="pill">{it.obtain}</span>}
+      <span class="pill sky" data-pagefind-filter="type">Item</span>
+    </div>
+    {it.description && <p class="lede">{it.description}</p>}
+    <button class="got-toggle" type="button" data-got-id={`item:${it.id}`} aria-pressed="false">Mark as gathered</button>
+
+    <dl class="kv">
+      {it.obtain && <><dt>How to get</dt><dd>{it.obtainDetail ?? prettify(it.obtain)}</dd></>}
+      {region && <><dt>Found in</dt><dd><a href={`/regions/${region.id}`}>{region.name}</a></dd></>}
+    </dl>
+    {it.notes && <p class="uncertain">{it.notes}</p>}
+
+    {recipe && (
+      <div class="panel">
+        <h2>Recipe</h2>
+        <dl class="kv">
+          {recipe.station && <><dt>Station</dt><dd>{prettify(recipe.station)}</dd></>}
+          {recipe.unlock && <><dt>Unlock</dt><dd>{recipe.unlock}</dd></>}
+          {recipe.effect && <><dt>Effect</dt><dd>{recipe.effect}</dd></>}
+        </dl>
+        {recipe.ingredients && recipe.ingredients.length > 0 && (
+          <>
+            <h3>Ingredients</h3>
+            <table>
+              <tbody>
+                {recipe.ingredients.map((g) => {
+                  const ref = resolveRef(g.material);
+                  return (
+                    <tr>
+                      <td>{ref.href ? <a href={ref.href}>{ref.name}</a> : ref.name}</td>
+                      <td style="text-align:right">× {g.qty ?? 1}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </>
+        )}
+        <p><a href={`/recipes/${recipe.id}`}>Full recipe →</a></p>
+      </div>
+    )}
+
+    {inHabitats.length > 0 && (
+      <div class="panel">
+        <h2>Used in habitats</h2>
+        <div class="chips">
+          {inHabitats.map((h) => <a class="pill sky" href={`/habitats/${h.id}`}>{h.name}</a>)}
+        </div>
+      </div>
+    )}
+
+    {relatedTips.length > 0 && (
+      <div class="panel">
+        <h2>Related tips</h2>
+        <ul>
+          {relatedTips.map((t) => <li><a href={`/tips/${t.id}`}>{t.title}</a></li>)}
+        </ul>
+      </div>
+    )}
+  </article>
+</Base>

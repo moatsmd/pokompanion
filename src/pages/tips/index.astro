@@ -1,0 +1,61 @@
+---
+import Base from '../../layouts/Base.astro';
+import { tips } from '../../lib/data';
+
+const categories = [...new Set(tips.map((t) => t.category).filter(Boolean))].sort();
+const sorted = [...tips].sort((a, b) => a.title.localeCompare(b.title));
+---
+
+<Base title="Efficiency Tips — Pokompanion" active="tips" description="Strategy and efficiency tips for Pokémon Pokopia — fastest ways to farm materials, use rare items, and progress.">
+  <h1>Efficiency Tips</h1>
+  <p class="lede">Fastest ways to farm, earn, and progress — plus what to do with those mystery items.</p>
+
+  <div class="controls">
+    <input type="search" id="q" placeholder="Filter tips…" aria-label="Filter tips" />
+    <select id="cat" aria-label="Filter by category">
+      <option value="">All topics</option>
+      {categories.map((c) => <option value={c}>{c}</option>)}
+    </select>
+    <span class="count-note" id="count">{sorted.length} tips</span>
+  </div>
+
+  <div class="grid" id="list">
+    {sorted.map((t) => (
+      <a
+        class="card"
+        href={`/tips/${t.id}`}
+        data-name={`${t.title} ${t.summary ?? ''} ${(t.tags ?? []).join(' ')}`.toLowerCase()}
+        data-cat={t.category ?? ''}
+      >
+        <h3>{t.title} {t.category && <span class="pill clay">{t.category}</span>}</h3>
+        <p>{t.summary ?? ''}</p>
+      </a>
+    ))}
+  </div>
+  <p class="empty" id="noresults" hidden>No tips match your filter.</p>
+  {sorted.length === 0 && <p class="empty">Tips are being written — check back shortly.</p>}
+
+  <script is:inline>
+    (() => {
+      const q = document.getElementById('q');
+      const cat = document.getElementById('cat');
+      const cards = [...document.querySelectorAll('#list .card')];
+      const count = document.getElementById('count');
+      const none = document.getElementById('noresults');
+      function apply() {
+        const term = q.value.trim().toLowerCase();
+        const c = cat.value;
+        let shown = 0;
+        for (const el of cards) {
+          const ok = (!term || el.dataset.name.includes(term)) && (!c || el.dataset.cat === c);
+          el.hidden = !ok;
+          if (ok) shown++;
+        }
+        count.textContent = shown + ' tip' + (shown === 1 ? '' : 's');
+        none.hidden = shown !== 0;
+      }
+      q.addEventListener('input', apply);
+      cat.addEventListener('change', apply);
+    })();
+  </script>
+</Base>

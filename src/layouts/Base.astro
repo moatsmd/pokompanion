@@ -1,0 +1,107 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  active?: string;
+}
+const { title, description = 'A searchable compendium for Pokémon Pokopia — materials, item sourcing, recipes, and region guides.', active } = Astro.props;
+const nav = [
+  { key: 'search', label: 'Search', href: '/search' },
+  { key: 'materials', label: 'Materials', href: '/materials' },
+  { key: 'items', label: 'Items', href: '/items' },
+  { key: 'recipes', label: 'Recipes', href: '/recipes' },
+  { key: 'regions', label: 'Regions', href: '/regions' },
+  { key: 'habitats', label: 'Habitats', href: '/habitats' },
+  { key: 'pokemon', label: 'Pokémon', href: '/pokemon' },
+  { key: 'tools', label: 'Tools', href: '/tools' },
+  { key: 'tips', label: 'Tips', href: '/tips' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <script is:inline>
+      // Set theme before paint to avoid a flash. Stored choice wins, else follow OS.
+      (() => {
+        const t = localStorage.getItem('theme') ||
+          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.dataset.theme = t;
+      })();
+    </script>
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container inner">
+        <a class="brand" href="/"><span class="dot"></span> Pokompanion</a>
+        <nav class="nav" aria-label="Primary">
+          {nav.map((n) => (
+            <a href={n.href} aria-current={active === n.key ? 'page' : undefined}>{n.label}</a>
+          ))}
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle light / dark"></button>
+      </div>
+    </header>
+
+    <main id="main" class="container">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          <strong>Pokompanion</strong> is an unofficial, fan-made compendium for
+          <em>Pokémon Pokopia</em>. Not affiliated with Nintendo, Game Freak, or
+          The Pokémon Company. Game data aggregated from public community wikis.
+        </p>
+        <p><a href="/about">About &amp; sources</a></p>
+      </div>
+    </footer>
+
+    <script is:inline>
+      document.getElementById('theme-toggle')?.addEventListener('click', () => {
+        const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+        document.documentElement.dataset.theme = next;
+        localStorage.setItem('theme', next);
+      });
+
+      // Gather checklist: any .got-toggle[data-got-id] persists to localStorage.
+      (() => {
+        const KEY = 'pk_got';
+        let set;
+        try { set = new Set(JSON.parse(localStorage.getItem(KEY) || '[]')); } catch { set = new Set(); }
+        const save = () => localStorage.setItem(KEY, JSON.stringify([...set]));
+        document.querySelectorAll('.got-toggle').forEach((btn) => {
+          const gid = btn.dataset.gotId;
+          const render = () => {
+            const on = set.has(gid);
+            btn.setAttribute('aria-pressed', String(on));
+            btn.classList.toggle('on', on);
+            btn.textContent = on ? '✓ Gathered' : 'Mark as gathered';
+          };
+          render();
+          btn.addEventListener('click', () => {
+            set.has(gid) ? set.delete(gid) : set.add(gid);
+            save();
+            render();
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

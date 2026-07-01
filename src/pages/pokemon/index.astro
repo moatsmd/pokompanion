@@ -1,0 +1,60 @@
+---
+import Base from '../../layouts/Base.astro';
+import { pokemon } from '../../lib/data';
+
+const biomes = [...new Set(pokemon.flatMap((p) => p.biomes))].sort();
+const sorted = [...pokemon].sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<Base title="Pokémon — Pokompanion" active="pokemon" description="Which habitats attract each Pokémon in Pokémon Pokopia, and how to build them.">
+  <h1>Pokémon</h1>
+  <p class="lede">Find a Pokémon and see exactly which habitats attract it.</p>
+
+  <div class="controls">
+    <input type="search" id="q" placeholder="Filter by Pokémon or habitat…" aria-label="Filter Pokémon" />
+    <select id="cat" aria-label="Filter by biome">
+      <option value="">All biomes</option>
+      {biomes.map((b) => <option value={b}>{b}</option>)}
+    </select>
+    <span class="count-note" id="count">{sorted.length} Pokémon</span>
+  </div>
+
+  <div class="grid" id="list">
+    {sorted.map((p) => (
+      <a
+        class="card"
+        href={`/pokemon/${p.id}`}
+        data-name={`${p.name} ${p.habitats.map((h) => h.name).join(' ')}`.toLowerCase()}
+        data-cat={p.biomes.join(' ')}
+      >
+        <h3>{p.name}</h3>
+        <p>Attracted by {p.habitats.length} habitat{p.habitats.length === 1 ? '' : 's'}{p.biomes.length ? ` · ${p.biomes.join(', ')}` : ''}</p>
+      </a>
+    ))}
+  </div>
+  <p class="empty" id="noresults" hidden>No Pokémon match your filter.</p>
+
+  <script is:inline>
+    (() => {
+      const q = document.getElementById('q');
+      const cat = document.getElementById('cat');
+      const cards = [...document.querySelectorAll('#list .card')];
+      const count = document.getElementById('count');
+      const none = document.getElementById('noresults');
+      function apply() {
+        const term = q.value.trim().toLowerCase();
+        const c = cat.value;
+        let shown = 0;
+        for (const el of cards) {
+          const ok = (!term || el.dataset.name.includes(term)) && (!c || el.dataset.cat.split(' ').includes(c));
+          el.hidden = !ok;
+          if (ok) shown++;
+        }
+        count.textContent = shown + ' Pokémon';
+        none.hidden = shown !== 0;
+      }
+      q.addEventListener('input', apply);
+      cat.addEventListener('change', apply);
+    })();
+  </script>
+</Base>

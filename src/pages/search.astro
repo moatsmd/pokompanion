@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Search — Pokompanion" active="search">
+  <h1>Search</h1>
+  <p class="lede">Full-text search across every material, item, recipe and region.</p>
+  <div id="search"></div>
+  <p class="count-note" id="search-hint">Search is available on the deployed (built) site.</p>
+
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+  <script is:inline>
+    window.addEventListener('DOMContentLoaded', () => {
+      const s = document.createElement('script');
+      s.src = '/pagefind/pagefind-ui.js';
+      s.onload = () => {
+        const ui = new PagefindUI({ element: '#search', showSubResults: true, showImages: false });
+        document.getElementById('search-hint')?.remove();
+        const q = new URLSearchParams(location.search).get('q');
+        if (q) ui.triggerSearch(q);
+      };
+      document.head.appendChild(s);
+    });
+  </script>
+
+  <style>
+    :global(.pagefind-ui) { --pagefind-ui-primary: var(--leaf-deep); --pagefind-ui-font: var(--font-body); }
+    :global(.pagefind-ui__search-input) { background: var(--surface); border-color: var(--border); color: var(--ink); }
+  </style>
+</Base>

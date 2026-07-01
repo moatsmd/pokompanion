@@ -1,0 +1,18 @@
+---
+import Base from '../../layouts/Base.astro';
+import { regions } from '../../lib/data';
+---
+
+<Base title="Regions — Pokompanion" active="regions" description="Region-by-region guides for Pokémon Pokopia: resources, landmarks and tools.">
+  <h1>Regions</h1>
+  <p class="lede">Where to go, what to gather, and which tools you'll need.</p>
+
+  <div class="grid">
+    {regions.map((r) => (
+      <a class="card" href={`/regions/${r.id}`}>
+        <h3>{r.name} {r.order && <span class="pill leaf">#{r.order}</span>}</h3>
+        <p>{r.summary ?? `${(r.keyResources?.length ?? 0)} key resources.`}</p>
+      </a>
+    ))}
+  </div>
+</Base>

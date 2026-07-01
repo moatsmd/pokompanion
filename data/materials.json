@@ -1,0 +1,983 @@
+{
+  "_sources": [
+    "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Pokopia",
+    "https://pokopiamap.com/guides/materials-master-list",
+    "https://pokopiaguide.com/guides/all-crafting-materials",
+    "https://pokemonpokopia.wiki/materials",
+    "https://www.pokopiawiki.com/items",
+    "https://game8.co/games/Pokemon-Pokopia/archives/583145",
+    "https://screenrant.com/pokopia-materials-pokemon-how-to-get-them-lumber-twine-fluff/",
+    "https://rankedboost.com/pokopia/materials/twine/",
+    "https://game8.co/games/Pokemon-Pokopia/archives/597705",
+    "https://gamerant.com/pokopia-paint-all-paint-colors-berrys-smearguru-crush-ability/",
+    "https://game8.co/games/Pokemon-Pokopia/archives/585593",
+    "https://www.serebii.net/pokemonpokopia/cooking.shtml",
+    "https://www.serebii.net/pokemonpokopia/vegetables.shtml",
+    "https://www.serebii.net/pokemonpokopia/items/cavemushrooms.shtml",
+    "https://www.serebii.net/pokemonpokopia/items/freshcarrot.shtml",
+    "https://www.serebii.net/pokemonpokopia/items/potato.shtml",
+    "https://game8.co/games/Pokemon-Pokopia/archives/582600",
+    "https://game8.co/games/Pokemon-Pokopia/archives/590102",
+    "https://game8.co/games/Pokemon-Pokopia/archives/583602",
+    "https://game8.co/games/Pokemon-Pokopia/archives/589999",
+    "https://game8.co/games/Pokemon-Pokopia/archives/585507",
+    "https://www.dexerto.com/wikis/pokopia/how-to-get-sea-glass-fragments-in-pokopia/",
+    "https://rankedboost.com/pokopia/guides/how-to-farm-crops/",
+    "https://pokopiaguide.com/guides/berry-guide",
+    "https://pokopiamap.com",
+    "https://game8.co/games/Pokemon-Pokopia"
+  ],
+  "materials": [
+    {
+      "id": "small-log",
+      "name": "Small Log",
+      "category": "wood",
+      "tier": "raw",
+      "description": "A short section of tree trunk left behind after felling a tree, the base feedstock that gets processed into usable Lumber.",
+      "sources": [
+        {
+          "method": "gather",
+          "region": "any",
+          "tool": "cut",
+          "detail": "Use Cut on trees to fell them; Small Logs are dropped in wooded areas across multiple regions.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [
+        "lumber"
+      ],
+      "usedInSummary": "Feedstock for Lumber; also usable as-is in some early recipes."
+    },
+    {
+      "id": "sturdy-stick",
+      "name": "Sturdy Stick",
+      "category": "wood",
+      "tier": "raw",
+      "description": "A fallen branch sturdy enough to use directly in simple toy and tool recipes.",
+      "sources": [
+        {
+          "method": "gather",
+          "region": "any",
+          "tool": null,
+          "detail": "Picked up near trees while exploring, or obtained with Cut on wooden debris.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Early crafting material for toys and simple tools; also the gift Scyther requests before teaching Cut."
+    },
+    {
+      "id": "lumber",
+      "name": "Lumber",
+      "category": "wood",
+      "tier": "refined",
+      "description": "Milled, construction-ready wood processed from raw logs rather than gathered directly.",
+      "sources": [
+        {
+          "method": "craft",
+          "region": "any",
+          "tool": null,
+          "detail": "Give Small Logs to a Pokémon with the Chop specialty (e.g. Scyther, Pinsir, Heracross) to process them into Lumber.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Core building block for early furniture and wooden structures."
+    },
+    {
+      "id": "vine-rope",
+      "name": "Vine Rope",
+      "category": "fiber",
+      "tier": "raw",
+      "description": "A length of tough plant vine, twisted enough to double as cordage.",
+      "sources": [
+        {
+          "method": "gather",
+          "region": "any",
+          "tool": "cut",
+          "detail": "Use Cut on vines, which grow in caves and high-altitude areas.",
+          "notes": null
+        },
+        {
+          "method": "drop",
+          "region": "any",
+          "tool": null,
+          "detail": "Dropped by Bellsprout and Weepinbell in their habitats.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Binding material for rustic furniture and early recipes."
+    },
+    {
+      "id": "stone",
+      "name": "Stone",
+      "category": "stone",
+      "tier": "raw",
+      "description": "A common fist-sized rock, the most basic building material in the game.",
+      "sources": [
+        {
+          "method": "gather",
+          "region": "any",
+          "tool": "rock-smash",
+          "detail": "Pick up loose stones while exploring, or use Rock Smash on boulders and rock blocks.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Ubiquitous base material for early building recipes; also the gift Hitmonchan requests before teaching Rock Smash."
+    },
+    {
+      "id": "limestone",
+      "name": "Limestone",
+      "category": "stone",
+      "tier": "raw",
+      "description": "A pale sedimentary rock mined in bulk for Concrete and marble-style flooring.",
+      "sources": [
+        {
+          "method": "mine",
+          "region": "rocky-ridges",
+          "tool": "rock-smash",
+          "detail": "Rock Smash limestone blocks found in the western cave of Rocky Ridges.",
+          "notes": null
+        },
+        {
+          "method": "mine",
+          "region": "sparkling-skylands",
+          "tool": "rock-smash",
+          "detail": "Also found on the eastern island of Sparkling Skylands.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [
+        "concrete"
+      ],
+      "usedInSummary": "Bulk mid-game resource for Concrete and marble-look building kits."
+    },
+    {
+      "id": "crystal-fragment",
+      "name": "Crystal Fragment",
+      "category": "stone",
+      "tier": "raw",
+      "description": "A shard chipped from a larger mineral cluster, prized for gem-themed decor.",
+      "sources": [
+        {
+          "method": "mine",
+          "region": "rocky-ridges",
+          "tool": "rock-smash",
+          "detail": "Rock Smash large crystal clusters found in the Rocky Ridges mines.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Decorative, rarer-tier material for gem and crystal-themed crafts."
+    },
+    {
+      "id": "soft-clay",
+      "name": "Soft Clay",
+      "category": "clay",
+      "tier": "raw",
+      "description": "Wet, pliable clay dug from riverbanks and cave floors, the raw input for Brick.",
+      "sources": [
+        {
+          "method": "gather",
+          "region": "bleak-beach",
+          "tool": "rock-smash",
+          "detail": "Rock Smash clay blocks found on Bleak Beach and in nearby caves such as Onix's cavern.",
+          "notes": null
+        },
+        {
+          "method": "drop",
+          "region": "any",
+          "tool": null,
+          "detail": "Occasionally left behind by Ground-type Pokémon with the Litter specialty.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [
+        "brick"
+      ],
+      "usedInSummary": "Feedstock for Brick; also used directly in a few clay-themed recipes."
+    },
+    {
+      "id": "brick",
+      "name": "Brick",
+      "category": "clay",
+      "tier": "refined",
+      "description": "Fired clay block used for sturdy walls, roads, and roofing.",
+      "sources": [
+        {
+          "method": "craft",
+          "region": "any",
+          "tool": null,
+          "detail": "Give Soft Clay to a Pokémon with the Burn specialty to bake it into Brick.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Core building material for stone-look houses and paths."
+    },
+    {
+      "id": "copper-ore",
+      "name": "Copper Ore",
+      "category": "metal",
+      "tier": "raw",
+      "description": "Reddish raw ore that yields Copper Ingot once smelted.",
+      "sources": [
+        {
+          "method": "mine",
+          "region": "rocky-ridges",
+          "tool": "rock-smash",
+          "detail": "Rock Smash copper ore blocks found in the Rocky Ridges mines.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [
+        "copper-ingot"
+      ],
+      "usedInSummary": "Early-game metal source for Copper Ingot."
+    },
+    {
+      "id": "iron-ore",
+      "name": "Iron Ore",
+      "category": "metal",
+      "tier": "raw",
+      "description": "Dense grey ore that smelts into Iron Ingot, a staple of mid-game construction.",
+      "sources": [
+        {
+          "method": "mine",
+          "region": "rocky-ridges",
+          "tool": "rock-smash",
+          "detail": "Rock Smash iron ore blocks found in the Rocky Ridges mines.",
+          "notes": null
+        },
+        {
+          "method": "craft",
+          "region": "bleak-beach",
+          "tool": null,
+          "detail": "Give Nonburnable Garbage to a Pokémon with the Recycle specialty in exchange for Iron Ore.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [
+        "iron-ingot"
+      ],
+      "usedInSummary": "Feedstock for Iron Ingot, used across furniture, tools, and machine parts."
+    },
+    {
+      "id": "gold-ore",
+      "name": "Gold Ore",
+      "category": "metal",
+      "tier": "raw",
+      "description": "A rare golden ore, scarcer than Copper or Iron Ore.",
+      "sources": [
+        {
+          "method": "mine",
+          "region": "rocky-ridges",
+          "tool": "rock-smash",
+          "detail": "Rock Smash gold ore blocks in the Rocky Ridges mines; rarer than Copper or Iron Ore.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [
+        "gold-ingot"
+      ],
+      "usedInSummary": "Feedstock for Gold Ingot, used in luxury decor."
+    },
+    {
+      "id": "pokemetal-fragment",
+      "name": "Pokemetal Fragment",
+      "category": "metal",
+      "tier": "raw",
+      "description": "A chunk of exotic ore unique to Pokopia's ruined biomes.",
+      "sources": [
+        {
+          "method": "mine",
+          "region": "withered-wasteland",
+          "tool": "rock-smash",
+          "detail": "Rock Smash Pokemetal ore blocks found in Withered Wasteland mines.",
+          "notes": null
+        },
+        {
+          "method": "mine",
+          "region": "sparkling-skylands",
+          "tool": "rock-smash",
+          "detail": "Also found in Sparkling Skylands mines.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [
+        "pokemetal"
+      ],
+      "usedInSummary": "Feedstock for Pokemetal, used in advanced crafting."
+    },
+    {
+      "id": "copper-ingot",
+      "name": "Copper Ingot",
+      "category": "metal",
+      "tier": "refined",
+      "description": "A smelted copper bar used in early metal furniture and machine parts.",
+      "sources": [
+        {
+          "method": "craft",
+          "region": "any",
+          "tool": null,
+          "detail": "Smelt Copper Ore in a Smelting Furnace with a Burn-specialty Pokémon.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Metal component for early machines and decor."
+    },
+    {
+      "id": "iron-ingot",
+      "name": "Iron Ingot",
+      "category": "metal",
+      "tier": "refined",
+      "description": "A smelted iron bar, a workhorse metal for tools, machines, and the Concrete Mixer.",
+      "sources": [
+        {
+          "method": "craft",
+          "region": "any",
+          "tool": null,
+          "detail": "Smelt Iron Ore in a Smelting Furnace with a Burn-specialty Pokémon.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Key structural metal; needed to build the Concrete Mixer and iron-themed furniture."
+    },
+    {
+      "id": "gold-ingot",
+      "name": "Gold Ingot",
+      "category": "metal",
+      "tier": "refined",
+      "description": "A smelted gold bar prized for shiny, high-tier decor.",
+      "sources": [
+        {
+          "method": "craft",
+          "region": "any",
+          "tool": null,
+          "detail": "Smelt Gold Ore in a Smelting Furnace with a Burn-specialty Pokémon.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Luxury metal for late-game decorative recipes."
+    },
+    {
+      "id": "pokemetal",
+      "name": "Pokemetal",
+      "category": "metal",
+      "tier": "refined",
+      "description": "A smelted exotic alloy used in some of the game's most advanced recipes.",
+      "sources": [
+        {
+          "method": "craft",
+          "region": "any",
+          "tool": null,
+          "detail": "Smelt Pokemetal Fragments in a Smelting Furnace with a Burn-specialty Pokémon.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "High-tier metal for advanced machines and armor-style crafts."
+    },
+    {
+      "id": "twine",
+      "name": "Twine",
+      "category": "fiber",
+      "tier": "raw",
+      "description": "Coarse cordage salvaged from scavenged fabric, useful for rustic and woven-style crafts.",
+      "sources": [
+        {
+          "method": "gather",
+          "region": "any",
+          "tool": "cut",
+          "detail": "Use Cut on textile garbage and cobwebs found around abandoned buildings.",
+          "notes": null
+        },
+        {
+          "method": "drop",
+          "region": "any",
+          "tool": null,
+          "detail": "Dropped passively by Bug-type Pokémon with the Litter specialty, such as Spinarak and Ariados.",
+          "notes": null
+        },
+        {
+          "method": "buy",
+          "region": "any",
+          "tool": null,
+          "detail": "Purchasable in small bundles from Pokémon Center shops.",
+          "notes": "Price and shop availability not independently confirmed."
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Woven-craft material for furniture and toys."
+    },
+    {
+      "id": "fluff",
+      "name": "Fluff",
+      "category": "fiber",
+      "tier": "raw",
+      "description": "Soft wool-like tufts shed passively by Wool Pokémon.",
+      "sources": [
+        {
+          "method": "drop",
+          "region": "any",
+          "tool": null,
+          "detail": "Dropped passively by Mareep and Flaaffy with the Litter specialty.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Soft-furnishing material for cushions and plush decor."
+    },
+    {
+      "id": "cloth",
+      "name": "Cloth",
+      "category": "fiber",
+      "tier": "raw",
+      "description": "A scrap of woven fabric salvaged from ruined buildings.",
+      "sources": [
+        {
+          "method": "gather",
+          "region": "bleak-beach",
+          "tool": "cut",
+          "detail": "Use Cut on fabric piles and cobwebs in and around abandoned buildings.",
+          "notes": "Also reported as findable while exploring more generally; region confidence is moderate."
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Fabric material for cloth walls and soft furnishings."
+    },
+    {
+      "id": "leaf",
+      "name": "Leaf",
+      "category": "fiber",
+      "tier": "raw",
+      "description": "A bright green leaf stripped from grass or trees.",
+      "sources": [
+        {
+          "method": "gather",
+          "region": "any",
+          "tool": "cut",
+          "detail": "Use Cut on tall grass and trees, or pick leaves up directly while exploring.",
+          "notes": null
+        },
+        {
+          "method": "drop",
+          "region": "any",
+          "tool": null,
+          "detail": "Dropped by Venusaur with the Litter specialty.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Common decorative and plant-craft material."
+    },
+    {
+      "id": "wastepaper",
+      "name": "Wastepaper",
+      "category": "fiber",
+      "tier": "raw",
+      "description": "Grimy discarded paper, worthless until recycled.",
+      "sources": [
+        {
+          "method": "gather",
+          "region": "sparkling-skylands",
+          "tool": null,
+          "detail": "Scattered on the ground throughout Sparkling Skylands.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [
+        "paper"
+      ],
+      "usedInSummary": "Sole feedstock for clean Paper."
+    },
+    {
+      "id": "paper",
+      "name": "Paper",
+      "category": "fiber",
+      "tier": "refined",
+      "description": "Clean white paper recycled from scavenged Wastepaper.",
+      "sources": [
+        {
+          "method": "craft",
+          "region": "any",
+          "tool": null,
+          "detail": "Give Wastepaper to a Pokémon with the Recycle specialty (e.g. Trubbish, Garbodor, Porygon).",
+          "notes": null
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Used in craft and decor recipes that call for paper goods."
+    },
+    {
+      "id": "concrete",
+      "name": "Concrete",
+      "category": "stone",
+      "tier": "refined",
+      "description": "A hardened building compound mixed from crushed Limestone.",
+      "sources": [
+        {
+          "method": "craft",
+          "region": "sparkling-skylands",
+          "tool": null,
+          "detail": "Build a Concrete Mixer (2 Iron Ingots), load it with Limestone near water, and have a Crush-specialty Pokémon process it.",
+          "notes": "The Concrete Mixer recipe is unlocked through Sparkling Skylands progression."
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Modern building material for sturdy floors and walls."
+    },
+    {
+      "id": "glass",
+      "name": "Glass",
+      "category": "refined",
+      "tier": "refined",
+      "description": "Clear melted glass used for windows and glassware.",
+      "sources": [
+        {
+          "method": "craft",
+          "region": "any",
+          "tool": null,
+          "detail": "Smelt Volcanic Ash or Sand in a Smelting Furnace with a Burn-specialty Pokémon.",
+          "notes": null
+        },
+        {
+          "method": "drop",
+          "region": "any",
+          "tool": "rock-smash",
+          "detail": "Occasionally obtained by smashing broken windows.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Used for windows and glass-themed decor."
+    },
+    {
+      "id": "paint",
+      "name": "Paint",
+      "category": "refined",
+      "tier": "refined",
+      "description": "Colored dye crushed from berries, used to recolor buildings and furniture.",
+      "sources": [
+        {
+          "method": "craft",
+          "region": "any",
+          "tool": null,
+          "detail": "Give a berry to a Pokémon with the Crush specialty (e.g. Onix, Tyranitar) and request Paint; the berry's color determines the paint color (Leppa -> Red, Chesto -> Blue, Lum -> Green, Aspear -> Yellow, Pecha -> Pink, Rawst -> Cyan).",
+          "notes": "White and Black Paint are rare bonus drops from certain berries rather than tied to one dedicated berry."
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Recolors buildings, blocks, and furniture; each color is a distinct, non-interchangeable item."
+    },
+    {
+      "id": "seashell",
+      "name": "Seashell",
+      "category": "other",
+      "tier": "raw",
+      "description": "A common shell washed up on the shoreline.",
+      "sources": [
+        {
+          "method": "gather",
+          "region": "bleak-beach",
+          "tool": null,
+          "detail": "Pick up along the Bleak Beach shoreline.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Beach-themed decor and building material."
+    },
+    {
+      "id": "sea-glass",
+      "name": "Sea Glass",
+      "category": "other",
+      "tier": "raw",
+      "description": "A smooth, frosted shard of glass tumbled by the surf.",
+      "sources": [
+        {
+          "method": "gather",
+          "region": "bleak-beach",
+          "tool": null,
+          "detail": "Pick up while exploring Bleak Beach, often on tide-washed tiles.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Decorative beach-craft material."
+    },
+    {
+      "id": "nonburnable-garbage",
+      "name": "Nonburnable Garbage",
+      "category": "other",
+      "tier": "raw",
+      "description": "Rusted, unburnable trash cleared from the coastline.",
+      "sources": [
+        {
+          "method": "gather",
+          "region": "bleak-beach",
+          "tool": null,
+          "detail": "Pick up while exploring Bleak Beach.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [
+        "iron-ore"
+      ],
+      "usedInSummary": "Trade-in item exchanged for Iron Ore via a Recycle-specialty Pokémon."
+    },
+    {
+      "id": "glowing-mushroom",
+      "name": "Glowing Mushroom",
+      "category": "other",
+      "tier": "raw",
+      "description": "A bioluminescent fungus found underground, inedible but handy as a light source.",
+      "sources": [
+        {
+          "method": "forage",
+          "region": "withered-wasteland",
+          "tool": null,
+          "detail": "Found inside caves, notably in Withered Wasteland.",
+          "notes": null
+        },
+        {
+          "method": "forage",
+          "region": "rocky-ridges",
+          "tool": null,
+          "detail": "Also found inside Rocky Ridges caves.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Light-themed decor material."
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "category": "liquid",
+      "tier": "raw",
+      "description": "Sweet, sticky honey that also lures certain Pokémon back to their homes.",
+      "sources": [
+        {
+          "method": "forage",
+          "region": "any",
+          "tool": null,
+          "detail": "Inspect sparkling flower beds while exploring.",
+          "notes": null
+        },
+        {
+          "method": "drop",
+          "region": "any",
+          "tool": null,
+          "detail": "Given by Combee's Gather specialty.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Food/lure item and ingredient in a handful of recipes."
+    },
+    {
+      "id": "volcanic-ash",
+      "name": "Volcanic Ash",
+      "category": "other",
+      "tier": "raw",
+      "description": "Fine grey ash collected near volcanic vents, a key ingredient for Glass.",
+      "sources": [
+        {
+          "method": "gather",
+          "region": "any",
+          "tool": null,
+          "detail": "Found in volcanic areas.",
+          "notes": "Specific region uncertain across sources; Sand can substitute for it in the same recipe."
+        }
+      ],
+      "refinedInto": [
+        "glass"
+      ],
+      "usedInSummary": "Primary feedstock for Glass alongside Sand."
+    },
+    {
+      "id": "leppa-berry",
+      "name": "Leppa Berry",
+      "category": "produce",
+      "tier": "raw",
+      "description": "A red berry that grows naturally in every save file, useful both as a cooking ingredient and as the Red dye source for Paint.",
+      "sources": [
+        {
+          "method": "gather",
+          "region": "withered-wasteland",
+          "tool": null,
+          "detail": "Headbutt the naturally-growing Leppa Berry tree; unlike the other five berries, it needs no seed and is guaranteed to grow in every save.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [
+        "paint"
+      ],
+      "usedInSummary": "Cooking ingredient in Leppa Salad and Leppa Bread; also the Red dye source when given to a Crush-specialty Pokémon for Paint."
+    },
+    {
+      "id": "chesto-berry",
+      "name": "Chesto Berry",
+      "category": "produce",
+      "tier": "raw",
+      "description": "A blue berry cultivated from seeds found near Smeargle's hut on Bleak Beach.",
+      "sources": [
+        {
+          "method": "gather",
+          "region": "bleak-beach",
+          "tool": null,
+          "detail": "Find Chesto Berry seeds in a Poké Ball near Smeargle's hut, plant and grow the tree, then headbutt it once ripe.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [
+        "paint"
+      ],
+      "usedInSummary": "Cooking ingredient in Crushed-Berry Salad; also the Blue dye source when given to a Crush-specialty Pokémon for Paint."
+    },
+    {
+      "id": "aspear-berry",
+      "name": "Aspear Berry",
+      "category": "produce",
+      "tier": "raw",
+      "description": "A yellow berry cultivated from seeds found near Bleak Beach's waterfall.",
+      "sources": [
+        {
+          "method": "gather",
+          "region": "bleak-beach",
+          "tool": null,
+          "detail": "Find Aspear Berry seeds in a Poké Ball near the Bleak Beach waterfall, plant and grow the tree, then headbutt it once ripe.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [
+        "paint"
+      ],
+      "usedInSummary": "Cooking ingredient in Flavorful Soup; also the Yellow dye source when given to a Crush-specialty Pokémon for Paint."
+    },
+    {
+      "id": "pecha-berry",
+      "name": "Pecha Berry",
+      "category": "produce",
+      "tier": "raw",
+      "description": "A pink berry cultivated from seeds found along the Lava Lake side path in Rocky Ridges.",
+      "sources": [
+        {
+          "method": "gather",
+          "region": "rocky-ridges",
+          "tool": "cut",
+          "detail": "Find Pecha Berry seeds in a Poké Ball on the Lava Lake side path (reachable with an upgraded Cut), plant and grow the tree, then headbutt it once ripe.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [
+        "paint"
+      ],
+      "usedInSummary": "Cooking ingredient in Fluffy Bread; also the Pink dye source when given to a Crush-specialty Pokémon for Paint."
+    },
+    {
+      "id": "rawst-berry",
+      "name": "Rawst Berry",
+      "category": "produce",
+      "tier": "raw",
+      "description": "A cyan berry cultivated from seeds hidden among hanging vines on Sparkling Skylands' upper-left island.",
+      "sources": [
+        {
+          "method": "gather",
+          "region": "sparkling-skylands",
+          "tool": null,
+          "detail": "Find Rawst Berry seeds in a Poké Ball tucked in hanging vines on Sparkling Skylands' upper-left island, plant and grow the tree, then headbutt it once ripe.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [
+        "paint"
+      ],
+      "usedInSummary": "Cooking ingredient in Bitter Hamburger Steak; also the Cyan dye source when given to a Crush-specialty Pokémon for Paint."
+    },
+    {
+      "id": "lum-berry",
+      "name": "Lum Berry",
+      "category": "produce",
+      "tier": "raw",
+      "description": "A green berry cultivated from seeds found past Gimmighoul's Manor in Rocky Ridges.",
+      "sources": [
+        {
+          "method": "gather",
+          "region": "rocky-ridges",
+          "tool": null,
+          "detail": "Find Lum Berry seeds in a Poké Ball past Gimmighoul's Manor, in the lava area of Rocky Ridges, plant and grow the tree, then headbutt it once ripe.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [
+        "paint"
+      ],
+      "usedInSummary": "Cooking ingredient in Bitter Hamburger Steak; also the Green dye source when given to a Crush-specialty Pokémon for Paint."
+    },
+    {
+      "id": "wheat",
+      "name": "Wheat",
+      "category": "produce",
+      "tier": "raw",
+      "description": "A staple grain crop tilled and grown to bake into bread.",
+      "sources": [
+        {
+          "method": "gather",
+          "region": "rocky-ridges",
+          "tool": "rototiller",
+          "detail": "Till soil with Rototiller and plant Wheat Seeds, which turn up as Pokémon gifts, in red Poké Balls, or from water splashes around Rocky Ridges; harvest once ripe.",
+          "notes": "Sparkling Skylands' enriched soil also grows Wheat, roughly 15% faster than other regions; whether watering is required was not confirmed across sources."
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Base cooking ingredient for every bread recipe, cooked at the kitchen to restore Cut PP."
+    },
+    {
+      "id": "bean",
+      "name": "Bean",
+      "category": "produce",
+      "tier": "raw",
+      "description": "A hardy legume crop that grows without watering, the base cooking ingredient for hamburger steaks.",
+      "sources": [
+        {
+          "method": "gather",
+          "region": "withered-wasteland",
+          "tool": "rototiller",
+          "detail": "Till soil with Rototiller and plant Bean Seeds bought from the Withered Wasteland Pokémon Center shop; Beans grow on their own without needing to be watered.",
+          "notes": "regions.json currently lists 'beans' (plural) under Rocky Ridges' keyResources instead of Withered Wasteland; this file uses the singular id 'bean' per instruction, matching the ingredient id already used throughout recipes.json. Region flagged for reconciliation."
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Base cooking ingredient for every hamburger steak recipe, cooked at the kitchen to restore Rock Smash PP."
+    },
+    {
+      "id": "fresh-carrot",
+      "name": "Fresh Carrot",
+      "category": "produce",
+      "tier": "raw",
+      "description": "A carrot pulled up by its leaves from soft ground, found wild or grown from seed.",
+      "sources": [
+        {
+          "method": "gather",
+          "region": "withered-wasteland",
+          "tool": null,
+          "detail": "Pull ripe Fresh Carrots directly from soft ground; no tool is required.",
+          "notes": null
+        },
+        {
+          "method": "gather",
+          "region": "palette-town",
+          "tool": null,
+          "detail": "Also spawns naturally and can be pulled from the ground in Palette Town.",
+          "notes": "One quest walkthrough source also describes obtaining a Fresh Carrot by 'randomly digging around' or as a gift from another player, without naming a specific region."
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Cooking ingredient in Carrot Bread; also a gift that unlocks Gulpin's storage feature."
+    },
+    {
+      "id": "tomato",
+      "name": "Tomato",
+      "category": "produce",
+      "tier": "raw",
+      "description": "A red garden vegetable that needs regular watering to ripen.",
+      "sources": [
+        {
+          "method": "gather",
+          "region": "bleak-beach",
+          "tool": "water-gun",
+          "detail": "Till soil with Rototiller and plant Tomato Seeds, bought from the Pokémon Center shop after raising Bleak Beach's environment level, then water regularly with Water Gun until ripe.",
+          "notes": "regions.json currently lists tomato under Sparkling Skylands' keyResources rather than Bleak Beach; flagged for reconciliation. Tomato is also the gift Paldean Wooper requests (3 Tomatoes) to teach its liquid-carrying move."
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Cooking ingredient in Tomato Hamburger Steak."
+    },
+    {
+      "id": "potato",
+      "name": "Potato",
+      "category": "produce",
+      "tier": "raw",
+      "description": "A starchy root vegetable grown from seed in tilled soil.",
+      "sources": [
+        {
+          "method": "gather",
+          "region": "sparkling-skylands",
+          "tool": "cut",
+          "detail": "Use Cut on wild potato plants around Sparkling Skylands to collect Potato Seeds, then till soil with Rototiller, plant, and water with Water Gun until ripe.",
+          "notes": "Sourcing is mixed: Serebii's item database instead lists Potato as a natural spawn on a 'Dream Islands' sub-area not otherwise documented among Pokopia's core regions, while Game8's seed guide points to Sparkling Skylands. This entry follows the farmable-crop path in Sparkling Skylands as the more consistent, reachable source."
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Cooking ingredient in Potato Hamburger Steak and Vibrant Hamburger Steak."
+    },
+    {
+      "id": "cave-mushroom",
+      "name": "Cave Mushroom",
+      "category": "produce",
+      "tier": "raw",
+      "description": "A pale fungus that grows in damp, shaded ground and doubles as a mild PP-restoring snack.",
+      "sources": [
+        {
+          "method": "forage",
+          "region": "rocky-ridges",
+          "tool": null,
+          "detail": "Found growing in small numbers on damp, shaded ground on Rocky Ridges, including its green mountaintop areas.",
+          "notes": "regions.json currently cross-references this material to rocky-ridges-underground, but both Game8's guide and Serebii's item database place it on the Rocky Ridges surface rather than specifically underground; flagged for reconciliation. Separately, recipes.json's mushroom-soup and mushroom-hamburger-steak entries reference the plural id 'cave-mushrooms', which does not match this file's singular id 'cave-mushroom' used per instruction — flagging this id mismatch for reconciliation."
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Cooking ingredient in Mushroom Soup and Mushroom Hamburger Steak; also restores some PP if eaten raw."
+    },
+    {
+      "id": "seaweed",
+      "name": "Seaweed",
+      "category": "produce",
+      "tier": "raw",
+      "description": "Strands of dried seaweed washed up along the shoreline.",
+      "sources": [
+        {
+          "method": "gather",
+          "region": "bleak-beach",
+          "tool": null,
+          "detail": "Pick up directly off the ground along the southern beach area of Bleak Beach; no tool is required.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Cooking ingredient in Seaweed Salad and Seaweed Soup."
+    },
+    {
+      "id": "fresh-water",
+      "name": "Fresh Water",
+      "category": "liquid",
+      "tier": "raw",
+      "description": "A bottled portion of clean water, either bought or randomly dispensed from a working vending machine.",
+      "sources": [
+        {
+          "method": "buy",
+          "region": "rocky-ridges",
+          "tool": null,
+          "detail": "Purchase from the PC Shop for 50 Life Coins after reaching Environment Level 3 in Rocky Ridges.",
+          "notes": null
+        },
+        {
+          "method": "drop",
+          "region": "withered-wasteland",
+          "tool": null,
+          "detail": "Random daily drop from powered vending machines in Withered Wasteland; the machine must have electricity to dispense anything.",
+          "notes": null
+        }
+      ],
+      "refinedInto": [],
+      "usedInSummary": "Base liquid ingredient for every soup recipe; also what the Suck move carries and places as water blocks."
+    }
+  ]
+}

@@ -1,0 +1,875 @@
+{
+  "_sources": [
+    "https://pokopiamap.com/items",
+    "https://pokopiamap.com/crafting",
+    "https://pokopia.gamertw.com/item",
+    "https://pokopia.gamertw.com/crafting",
+    "https://www.pokopiawiki.com/items",
+    "https://pokopia.town/items",
+    "https://en.wikipedia.org/wiki/Pok%C3%A9mon_Pokopia",
+    "https://www.serebii.net/pokemonpokopia/cooking.shtml",
+    "https://game8.co/games/Pokemon-Pokopia/archives/582475"
+  ],
+  "recipes": [
+    {
+      "id": "workbench",
+      "name": "Workbench",
+      "output": "workbench",
+      "outputQty": 1,
+      "station": "workbench",
+      "unlock": "Unlocked during the Pokémon Center construction questline early in the story.",
+      "ingredients": [
+        {
+          "material": "stone",
+          "qty": 2
+        }
+      ],
+      "effect": null,
+      "notes": null
+    },
+    {
+      "id": "storage-box",
+      "name": "Storage Box",
+      "output": "storage-box",
+      "outputQty": 1,
+      "station": "workbench",
+      "unlock": "Register 7 Pokémon in the Pokédex.",
+      "ingredients": [
+        {
+          "material": "lumber",
+          "qty": 1
+        }
+      ],
+      "effect": null,
+      "notes": null
+    },
+    {
+      "id": "big-storage-box",
+      "name": "Big Storage Box",
+      "output": "big-storage-box",
+      "outputQty": 1,
+      "station": "workbench",
+      "unlock": "Available at the workbench.",
+      "ingredients": [
+        {
+          "material": "pokemetal",
+          "qty": 3
+        }
+      ],
+      "effect": null,
+      "notes": "Unlock condition uncertain — one source lists a 30-Pokémon registration gate instead."
+    },
+    {
+      "id": "plain-chest",
+      "name": "Plain Chest",
+      "output": "plain-chest",
+      "outputQty": 1,
+      "station": "workbench",
+      "unlock": "Available at the workbench.",
+      "ingredients": [
+        {
+          "material": "twine",
+          "qty": 1
+        },
+        {
+          "material": "lumber",
+          "qty": 1
+        }
+      ],
+      "effect": null,
+      "notes": null
+    },
+    {
+      "id": "office-cabinet",
+      "name": "Office Cabinet",
+      "output": "office-cabinet",
+      "outputQty": 1,
+      "station": "workbench",
+      "unlock": "Available at the workbench.",
+      "ingredients": [
+        {
+          "material": "pokemetal",
+          "qty": 1
+        }
+      ],
+      "effect": null,
+      "notes": null
+    },
+    {
+      "id": "gaming-fridge",
+      "name": "Gaming Fridge",
+      "output": "gaming-fridge",
+      "outputQty": 1,
+      "station": "workbench",
+      "unlock": "Available at the workbench.",
+      "ingredients": [
+        {
+          "material": "gold-ingot",
+          "qty": 1
+        },
+        {
+          "material": "pokemetal",
+          "qty": 1
+        },
+        {
+          "material": "glass",
+          "qty": 1
+        }
+      ],
+      "effect": null,
+      "notes": "Obtain method uncertain — one source lists this as a shop purchase after reaching Environment Level 10 in Sparkling Skylands rather than a craft recipe."
+    },
+    {
+      "id": "poke-ball-chest",
+      "name": "Poké Ball Chest",
+      "output": "poke-ball-chest",
+      "outputQty": 1,
+      "station": "workbench",
+      "unlock": "Available at the workbench.",
+      "ingredients": [
+        {
+          "material": "iron-ingot",
+          "qty": 1
+        },
+        {
+          "material": "pokemetal",
+          "qty": 1
+        }
+      ],
+      "effect": null,
+      "notes": null
+    },
+    {
+      "id": "antique-chest",
+      "name": "Antique Chest",
+      "output": "antique-chest",
+      "outputQty": 1,
+      "station": "workbench",
+      "unlock": "Available at the workbench.",
+      "ingredients": [
+        {
+          "material": "twine",
+          "qty": 1
+        },
+        {
+          "material": "iron-ore",
+          "qty": 1
+        },
+        {
+          "material": "lumber",
+          "qty": 2
+        }
+      ],
+      "effect": null,
+      "notes": null
+    },
+    {
+      "id": "plain-closet",
+      "name": "Plain Closet",
+      "output": "plain-closet",
+      "outputQty": 1,
+      "station": "workbench",
+      "unlock": "Available at the workbench.",
+      "ingredients": [
+        {
+          "material": "twine",
+          "qty": 1
+        },
+        {
+          "material": "lumber",
+          "qty": 2
+        }
+      ],
+      "effect": null,
+      "notes": null
+    },
+    {
+      "id": "antique-closet",
+      "name": "Antique Closet",
+      "output": "antique-closet",
+      "outputQty": 1,
+      "station": "workbench",
+      "unlock": "Available at the workbench.",
+      "ingredients": [
+        {
+          "material": "twine",
+          "qty": 1
+        },
+        {
+          "material": "iron-ore",
+          "qty": 2
+        },
+        {
+          "material": "lumber",
+          "qty": 2
+        }
+      ],
+      "effect": null,
+      "notes": null
+    },
+    {
+      "id": "office-shelf",
+      "name": "Office Shelf",
+      "output": "office-shelf",
+      "outputQty": 1,
+      "station": "workbench",
+      "unlock": "Available at the workbench.",
+      "ingredients": [
+        {
+          "material": "pokemetal",
+          "qty": 2
+        },
+        {
+          "material": "glass",
+          "qty": 1
+        }
+      ],
+      "effect": null,
+      "notes": null
+    },
+    {
+      "id": "straw-table",
+      "name": "Straw Table",
+      "output": "straw-table",
+      "outputQty": 1,
+      "station": "workbench",
+      "unlock": "Available at the workbench.",
+      "ingredients": [
+        {
+          "material": "stone",
+          "qty": 1
+        },
+        {
+          "material": "leaf",
+          "qty": 1
+        }
+      ],
+      "effect": null,
+      "notes": null
+    },
+    {
+      "id": "log-table",
+      "name": "Log Table",
+      "output": "log-table",
+      "outputQty": 1,
+      "station": "workbench",
+      "unlock": "Available the first time the workbench is used.",
+      "ingredients": [
+        {
+          "material": "small-log",
+          "qty": 1
+        }
+      ],
+      "effect": null,
+      "notes": null
+    },
+    {
+      "id": "side-table",
+      "name": "Side Table",
+      "output": "side-table",
+      "outputQty": 1,
+      "station": "workbench",
+      "unlock": "Available at the workbench.",
+      "ingredients": [
+        {
+          "material": "stone",
+          "qty": 1
+        },
+        {
+          "material": "iron-ingot",
+          "qty": 1
+        }
+      ],
+      "effect": null,
+      "notes": null
+    },
+    {
+      "id": "garden-table",
+      "name": "Garden Table",
+      "output": "garden-table",
+      "outputQty": 1,
+      "station": "workbench",
+      "unlock": "Available at the workbench.",
+      "ingredients": [
+        {
+          "material": "iron-ore",
+          "qty": 2
+        }
+      ],
+      "effect": null,
+      "notes": null
+    },
+    {
+      "id": "iron-bed",
+      "name": "Iron Bed",
+      "output": "iron-bed",
+      "outputQty": 1,
+      "station": "workbench",
+      "unlock": "Available at the workbench.",
+      "ingredients": [
+        {
+          "material": "fluff",
+          "qty": 2
+        },
+        {
+          "material": "iron-ingot",
+          "qty": 2
+        }
+      ],
+      "effect": null,
+      "notes": null
+    },
+    {
+      "id": "luxury-bed",
+      "name": "Luxury Bed",
+      "output": "luxury-bed",
+      "outputQty": 1,
+      "station": "workbench",
+      "unlock": "Available at the workbench.",
+      "ingredients": [
+        {
+          "material": "fluff",
+          "qty": 2
+        },
+        {
+          "material": "gold-ingot",
+          "qty": 2
+        },
+        {
+          "material": "limestone",
+          "qty": 4
+        }
+      ],
+      "effect": null,
+      "notes": "Obtain method uncertain — one source lists this as a shop purchase after reaching Environment Level 10 in Rocky Ridges rather than a craft recipe."
+    },
+    {
+      "id": "picnic-basket",
+      "name": "Picnic Basket",
+      "output": "picnic-basket",
+      "outputQty": 1,
+      "station": "workbench",
+      "unlock": "Unlocked upon first obtaining vine rope.",
+      "ingredients": [
+        {
+          "material": "sturdy-stick",
+          "qty": 1
+        },
+        {
+          "material": "vine-rope",
+          "qty": 1
+        }
+      ],
+      "effect": null,
+      "notes": null
+    },
+    {
+      "id": "concrete-pipe",
+      "name": "Concrete Pipe",
+      "output": "concrete-pipe",
+      "outputQty": 1,
+      "station": "workbench",
+      "unlock": "Available at the workbench.",
+      "ingredients": [
+        {
+          "material": "concrete",
+          "qty": 1
+        }
+      ],
+      "effect": null,
+      "notes": "Ingredient quantity uncertain — sources confirm concrete as the input but not the exact amount."
+    },
+    {
+      "id": "gaming-pc",
+      "name": "Gaming PC",
+      "output": "gaming-pc",
+      "outputQty": 1,
+      "station": "workbench",
+      "unlock": "Available at the workbench.",
+      "ingredients": [
+        {
+          "material": "pokemetal",
+          "qty": 2
+        },
+        {
+          "material": "glass",
+          "qty": 2
+        }
+      ],
+      "effect": null,
+      "notes": null
+    },
+    {
+      "id": "simple-salad",
+      "name": "Simple Salad",
+      "output": "simple-salad",
+      "outputQty": 1,
+      "station": "kitchen",
+      "unlock": "Cooking unlocks after reaching Great Pokédex rank and meeting Chef Dente in Rocky Ridges.",
+      "ingredients": [
+        {
+          "material": "leaf",
+          "qty": 2
+        }
+      ],
+      "effect": "Restores 40 PP to Leafage.",
+      "notes": null
+    },
+    {
+      "id": "leppa-salad",
+      "name": "Leppa Salad",
+      "output": "leppa-salad",
+      "outputQty": 1,
+      "station": "kitchen",
+      "unlock": "Cooking unlocks after reaching Great Pokédex rank and meeting Chef Dente in Rocky Ridges.",
+      "ingredients": [
+        {
+          "material": "leaf",
+          "qty": 2
+        },
+        {
+          "material": "leppa-berry",
+          "qty": 1
+        }
+      ],
+      "effect": "Restores 20 PP to Leafage.",
+      "notes": null
+    },
+    {
+      "id": "seaweed-salad",
+      "name": "Seaweed Salad",
+      "output": "seaweed-salad",
+      "outputQty": 1,
+      "station": "kitchen",
+      "unlock": "Cooking unlocks after reaching Great Pokédex rank and meeting Chef Dente in Rocky Ridges.",
+      "ingredients": [
+        {
+          "material": "leaf",
+          "qty": 2
+        },
+        {
+          "material": "seaweed",
+          "qty": 1
+        }
+      ],
+      "effect": "Restores 60 PP to Leafage.",
+      "notes": null
+    },
+    {
+      "id": "shredded-salad",
+      "name": "Shredded Salad",
+      "output": "shredded-salad",
+      "outputQty": 1,
+      "station": "kitchen",
+      "unlock": "Cooking unlocks after reaching Great Pokédex rank and meeting Chef Dente in Rocky Ridges; requires the Chop specialty.",
+      "ingredients": [
+        {
+          "material": "leaf",
+          "qty": 2
+        }
+      ],
+      "effect": "Restores 60 PP to Leafage.",
+      "notes": null
+    },
+    {
+      "id": "crushed-berry-salad",
+      "name": "Crushed-Berry Salad",
+      "output": "crushed-berry-salad",
+      "outputQty": 1,
+      "station": "kitchen",
+      "unlock": "Cooking unlocks after reaching Great Pokédex rank and meeting Chef Dente in Rocky Ridges; requires the Crush specialty.",
+      "ingredients": [
+        {
+          "material": "leaf",
+          "qty": 2
+        },
+        {
+          "material": "chesto-berry",
+          "qty": 1
+        }
+      ],
+      "effect": "Restores 80 PP to Leafage.",
+      "notes": null
+    },
+    {
+      "id": "crouton-salad",
+      "name": "Crouton Salad",
+      "output": "crouton-salad",
+      "outputQty": 1,
+      "station": "kitchen",
+      "unlock": "Cooking unlocks after reaching Great Pokédex rank and meeting Chef Dente in Rocky Ridges.",
+      "ingredients": [
+        {
+          "material": "leaf",
+          "qty": 2
+        },
+        {
+          "material": "simple-bread",
+          "qty": 1
+        }
+      ],
+      "effect": "Restores 80 PP to Leafage.",
+      "notes": null
+    },
+    {
+      "id": "simple-soup",
+      "name": "Simple Soup",
+      "output": "simple-soup",
+      "outputQty": 1,
+      "station": "kitchen",
+      "unlock": "Cooking unlocks after reaching Great Pokédex rank and meeting Chef Dente in Rocky Ridges.",
+      "ingredients": [
+        {
+          "material": "fresh-water",
+          "qty": 2
+        }
+      ],
+      "effect": "Restores 40 PP to Water Gun.",
+      "notes": null
+    },
+    {
+      "id": "seaweed-soup",
+      "name": "Seaweed Soup",
+      "output": "seaweed-soup",
+      "outputQty": 1,
+      "station": "kitchen",
+      "unlock": "Cooking unlocks after reaching Great Pokédex rank and meeting Chef Dente in Rocky Ridges.",
+      "ingredients": [
+        {
+          "material": "fresh-water",
+          "qty": 2
+        },
+        {
+          "material": "seaweed",
+          "qty": 1
+        }
+      ],
+      "effect": "Restores 20 PP to Water Gun.",
+      "notes": null
+    },
+    {
+      "id": "mushroom-soup",
+      "name": "Mushroom Soup",
+      "output": "mushroom-soup",
+      "outputQty": 1,
+      "station": "kitchen",
+      "unlock": "Cooking unlocks after reaching Great Pokédex rank and meeting Chef Dente in Rocky Ridges.",
+      "ingredients": [
+        {
+          "material": "fresh-water",
+          "qty": 2
+        },
+        {
+          "material": "cave-mushroom",
+          "qty": 1
+        }
+      ],
+      "effect": "Restores 60 PP to Water Gun.",
+      "notes": null
+    },
+    {
+      "id": "electrifying-soup",
+      "name": "Electrifying Soup",
+      "output": "electrifying-soup",
+      "outputQty": 1,
+      "station": "kitchen",
+      "unlock": "Cooking unlocks after reaching Great Pokédex rank and meeting Chef Dente in Rocky Ridges; requires the Generate specialty.",
+      "ingredients": [
+        {
+          "material": "fresh-water",
+          "qty": 2
+        }
+      ],
+      "effect": "Restores 60 PP to Water Gun.",
+      "notes": null
+    },
+    {
+      "id": "healthy-soup",
+      "name": "Healthy Soup",
+      "output": "healthy-soup",
+      "outputQty": 1,
+      "station": "kitchen",
+      "unlock": "Cooking unlocks after reaching Great Pokédex rank and meeting Chef Dente in Rocky Ridges.",
+      "ingredients": [
+        {
+          "material": "fresh-water",
+          "qty": 2
+        },
+        {
+          "material": "bean",
+          "qty": 1
+        },
+        {
+          "material": "leaf",
+          "qty": 1
+        }
+      ],
+      "effect": "Restores 80 PP to Water Gun.",
+      "notes": null
+    },
+    {
+      "id": "flavorful-soup",
+      "name": "Flavorful Soup",
+      "output": "flavorful-soup",
+      "outputQty": 1,
+      "station": "kitchen",
+      "unlock": "Cooking unlocks after reaching Great Pokédex rank and meeting Chef Dente in Rocky Ridges.",
+      "ingredients": [
+        {
+          "material": "fresh-water",
+          "qty": 2
+        },
+        {
+          "material": "aspear-berry",
+          "qty": 1
+        },
+        {
+          "material": "simple-hamburger-steak",
+          "qty": 1
+        }
+      ],
+      "effect": "Restores 80 PP to Water Gun.",
+      "notes": null
+    },
+    {
+      "id": "simple-bread",
+      "name": "Simple Bread",
+      "output": "simple-bread",
+      "outputQty": 1,
+      "station": "kitchen",
+      "unlock": "Cooking unlocks after reaching Great Pokédex rank and meeting Chef Dente in Rocky Ridges.",
+      "ingredients": [
+        {
+          "material": "wheat",
+          "qty": 2
+        }
+      ],
+      "effect": "Restores 60 PP to Cut.",
+      "notes": null
+    },
+    {
+      "id": "leppa-bread",
+      "name": "Leppa Bread",
+      "output": "leppa-bread",
+      "outputQty": 1,
+      "station": "kitchen",
+      "unlock": "Cooking unlocks after reaching Great Pokédex rank and meeting Chef Dente in Rocky Ridges.",
+      "ingredients": [
+        {
+          "material": "wheat",
+          "qty": 2
+        },
+        {
+          "material": "leppa-berry",
+          "qty": 1
+        }
+      ],
+      "effect": "Restores 20 PP to Cut.",
+      "notes": null
+    },
+    {
+      "id": "carrot-bread",
+      "name": "Carrot Bread",
+      "output": "carrot-bread",
+      "outputQty": 1,
+      "station": "kitchen",
+      "unlock": "Cooking unlocks after reaching Great Pokédex rank and meeting Chef Dente in Rocky Ridges.",
+      "ingredients": [
+        {
+          "material": "wheat",
+          "qty": 2
+        },
+        {
+          "material": "fresh-carrot",
+          "qty": 1
+        }
+      ],
+      "effect": "Restores 90 PP to Cut.",
+      "notes": null
+    },
+    {
+      "id": "recycled-bread",
+      "name": "Recycled Bread",
+      "output": "recycled-bread",
+      "outputQty": 1,
+      "station": "kitchen",
+      "unlock": "Cooking unlocks after reaching Great Pokédex rank and meeting Chef Dente in Rocky Ridges; requires the Recycle specialty.",
+      "ingredients": [
+        {
+          "material": "wheat",
+          "qty": 2
+        },
+        {
+          "material": "simple-bread",
+          "qty": 1
+        }
+      ],
+      "effect": "Restores 90 PP to Cut.",
+      "notes": null
+    },
+    {
+      "id": "fluffy-bread",
+      "name": "Fluffy Bread",
+      "output": "fluffy-bread",
+      "outputQty": 1,
+      "station": "kitchen",
+      "unlock": "Cooking unlocks after reaching Great Pokédex rank and meeting Chef Dente in Rocky Ridges; requires the Water specialty.",
+      "ingredients": [
+        {
+          "material": "wheat",
+          "qty": 2
+        },
+        {
+          "material": "pecha-berry",
+          "qty": 1
+        }
+      ],
+      "effect": "Restores 120 PP to Cut.",
+      "notes": null
+    },
+    {
+      "id": "bread-bowl",
+      "name": "Bread Bowl",
+      "output": "bread-bowl",
+      "outputQty": 1,
+      "station": "kitchen",
+      "unlock": "Cooking unlocks after reaching Great Pokédex rank and meeting Chef Dente in Rocky Ridges; requires the Burn specialty.",
+      "ingredients": [
+        {
+          "material": "wheat",
+          "qty": 2
+        },
+        {
+          "material": "simple-soup",
+          "qty": 1
+        }
+      ],
+      "effect": "Restores 120 PP to Cut.",
+      "notes": null
+    },
+    {
+      "id": "simple-hamburger-steak",
+      "name": "Simple Hamburger Steak",
+      "output": "simple-hamburger-steak",
+      "outputQty": 1,
+      "station": "kitchen",
+      "unlock": "Cooking unlocks after reaching Great Pokédex rank and meeting Chef Dente in Rocky Ridges.",
+      "ingredients": [
+        {
+          "material": "bean",
+          "qty": 2
+        }
+      ],
+      "effect": "Restores 350 PP to Rock Smash.",
+      "notes": null
+    },
+    {
+      "id": "mushroom-hamburger-steak",
+      "name": "Mushroom Hamburger Steak",
+      "output": "mushroom-hamburger-steak",
+      "outputQty": 1,
+      "station": "kitchen",
+      "unlock": "Cooking unlocks after reaching Great Pokédex rank and meeting Chef Dente in Rocky Ridges.",
+      "ingredients": [
+        {
+          "material": "bean",
+          "qty": 2
+        },
+        {
+          "material": "cave-mushroom",
+          "qty": 1
+        }
+      ],
+      "effect": "Restores 240 PP to Rock Smash.",
+      "notes": null
+    },
+    {
+      "id": "tomato-hamburger-steak",
+      "name": "Tomato Hamburger Steak",
+      "output": "tomato-hamburger-steak",
+      "outputQty": 1,
+      "station": "kitchen",
+      "unlock": "Cooking unlocks after reaching Great Pokédex rank and meeting Chef Dente in Rocky Ridges.",
+      "ingredients": [
+        {
+          "material": "bean",
+          "qty": 2
+        },
+        {
+          "material": "tomato",
+          "qty": 1
+        }
+      ],
+      "effect": "Restores 500 PP to Rock Smash.",
+      "notes": null
+    },
+    {
+      "id": "potato-hamburger-steak",
+      "name": "Potato Hamburger Steak",
+      "output": "potato-hamburger-steak",
+      "outputQty": 1,
+      "station": "kitchen",
+      "unlock": "Cooking unlocks after reaching Great Pokédex rank and meeting Chef Dente in Rocky Ridges.",
+      "ingredients": [
+        {
+          "material": "bean",
+          "qty": 2
+        },
+        {
+          "material": "potato",
+          "qty": 1
+        }
+      ],
+      "effect": "Restores 500 PP to Rock Smash.",
+      "notes": null
+    },
+    {
+      "id": "bitter-hamburger-steak",
+      "name": "Bitter Hamburger Steak",
+      "output": "bitter-hamburger-steak",
+      "outputQty": 1,
+      "station": "kitchen",
+      "unlock": "Cooking unlocks after reaching Great Pokédex rank and meeting Chef Dente in Rocky Ridges.",
+      "ingredients": [
+        {
+          "material": "bean",
+          "qty": 2
+        },
+        {
+          "material": "rawst-berry",
+          "qty": 1
+        },
+        {
+          "material": "lum-berry",
+          "qty": 1
+        }
+      ],
+      "effect": "Restores 650 PP to Rock Smash.",
+      "notes": null
+    },
+    {
+      "id": "vibrant-hamburger-steak",
+      "name": "Vibrant Hamburger Steak",
+      "output": "vibrant-hamburger-steak",
+      "outputQty": 1,
+      "station": "kitchen",
+      "unlock": "Cooking unlocks after reaching Great Pokédex rank and meeting Chef Dente in Rocky Ridges.",
+      "ingredients": [
+        {
+          "material": "bean",
+          "qty": 2
+        },
+        {
+          "material": "simple-salad",
+          "qty": 1
+        },
+        {
+          "material": "potato",
+          "qty": 1
+        }
+      ],
+      "effect": "Restores 650 PP to Rock Smash.",
+      "notes": null
+    }
+  ]
+}

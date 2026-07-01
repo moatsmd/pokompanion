@@ -1,0 +1,21 @@
+---
+import Base from '../../layouts/Base.astro';
+import { tools } from '../../lib/data';
+---
+
+<Base title="Tools — Pokompanion" active="tools" description="Pokémon moves used as environment tools in Pokémon Pokopia.">
+  <h1>Tools &amp; moves</h1>
+  <p class="lede">Befriend Pokémon to learn moves that shape the world and gather materials.</p>
+
+  <div class="grid" data-pagefind-body>
+    {tools.map((t) => (
+      <div class="card" id={t.id}>
+        <h3>{t.name}</h3>
+        {t.pokemon && <p><span class="pill leaf">{t.pokemon}</span></p>}
+        {t.effect && <p>{t.effect}</p>}
+        {t.unlockSummary && <p class="count-note">{t.unlockSummary}</p>}
+        {t.notes && <p class="uncertain">{t.notes}</p>}
+      </div>
+    ))}
+  </div>
+</Base>

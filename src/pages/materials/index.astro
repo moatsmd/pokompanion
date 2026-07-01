@@ -1,0 +1,58 @@
+---
+import Base from '../../layouts/Base.astro';
+import { materials } from '../../lib/data';
+
+const categories = [...new Set(materials.map((m) => m.category).filter(Boolean))].sort();
+const sorted = [...materials].sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<Base title="Materials — Pokompanion" active="materials" description="Every Pokémon Pokopia crafting material and exactly how to source it.">
+  <h1>Materials</h1>
+  <p class="lede">Raw and refined resources, and how to gather each one.</p>
+
+  <div class="controls">
+    <input type="search" id="q" placeholder="Filter materials…" aria-label="Filter materials" />
+    <select id="cat" aria-label="Filter by category">
+      <option value="">All categories</option>
+      {categories.map((c) => <option value={c}>{c}</option>)}
+    </select>
+    <span class="count-note" id="count">{sorted.length} materials</span>
+  </div>
+
+  <div class="grid" id="list">
+    {sorted.map((m) => {
+      const first = m.sources?.[0];
+      return (
+        <a class="card" href={`/materials/${m.id}`} data-name={m.name.toLowerCase()} data-cat={m.category ?? ''}>
+          <h3>{m.name} {m.category && <span class="pill leaf">{m.category}</span>}</h3>
+          <p>{m.description ?? (first ? `Obtain by ${first.method?.toLowerCase()}.` : 'Crafting material.')}</p>
+        </a>
+      );
+    })}
+  </div>
+  <p class="empty" id="noresults" hidden>No materials match your filter.</p>
+
+  <script is:inline>
+    (() => {
+      const q = document.getElementById('q');
+      const cat = document.getElementById('cat');
+      const cards = [...document.querySelectorAll('#list .card')];
+      const count = document.getElementById('count');
+      const none = document.getElementById('noresults');
+      function apply() {
+        const term = q.value.trim().toLowerCase();
+        const c = cat.value;
+        let shown = 0;
+        for (const el of cards) {
+          const ok = (!term || el.dataset.name.includes(term)) && (!c || el.dataset.cat === c);
+          el.hidden = !ok;
+          if (ok) shown++;
+        }
+        count.textContent = shown + ' material' + (shown === 1 ? '' : 's');
+        none.hidden = shown !== 0;
+      }
+      q.addEventListener('input', apply);
+      cat.addEventListener('change', apply);
+    })();
+  </script>
+</Base>

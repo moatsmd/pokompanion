@@ -1,0 +1,91 @@
+---
+import Base from '../../layouts/Base.astro';
+import { materials, materialsById, regionsById, toolsById, resolveRef, recipesUsing, regionsWithResource, habitatsRequiring, tipsRelatedTo, prettify } from '../../lib/data';
+
+export function getStaticPaths() {
+  return materials.map((m) => ({ params: { id: m.id } }));
+}
+
+const { id } = Astro.params;
+const m = materialsById.get(id!)!;
+const usedIn = recipesUsing(m.id);
+const foundIn = regionsWithResource(m.id);
+const inHabitats = habitatsRequiring(m.id);
+const relatedTips = tipsRelatedTo(m.id);
+const refined = (m.refinedInto ?? []).map(resolveRef);
+---
+
+<Base title={`${m.name} — Pokompanion`} active="materials" description={m.description ?? `How to source ${m.name} in Pokémon Pokopia.`}>
+  <p class="crumb"><a href="/materials">← Materials</a></p>
+  <article data-pagefind-body>
+    <h1>{m.name}</h1>
+    <div class="chips">
+      {m.category && <span class="pill leaf" data-pagefind-filter="category">{m.category}</span>}
+      {m.tier && <span class="pill">{m.tier}</span>}
+      <span class="pill sky" data-pagefind-filter="type">Material</span>
+    </div>
+    {m.description && <p class="lede">{m.description}</p>}
+    <button class="got-toggle" type="button" data-got-id={`material:${m.id}`} aria-pressed="false">Mark as gathered</button>
+
+    <div class="panel">
+      <h2>How to source</h2>
+      {m.sources && m.sources.length ? (
+        <table>
+          <thead><tr><th>Method</th><th>Where</th><th>Tool</th><th>Details</th></tr></thead>
+          <tbody>
+            {m.sources.map((s) => {
+              const region = s.region && s.region !== 'any' ? regionsById.get(s.region) : null;
+              const tool = s.tool ? toolsById.get(s.tool) : null;
+              return (
+                <tr>
+                  <td>{s.method ?? '—'}</td>
+                  <td>{region ? <a href={`/regions/${region.id}`}>{region.name}</a> : (s.region === 'any' ? 'Anywhere' : (s.region ? prettify(s.region) : '—'))}</td>
+                  <td>{tool ? <a href={`/tools#${tool.id}`}>{tool.name}</a> : (s.tool ? prettify(s.tool) : '—')}</td>
+                  <td>{s.detail ?? ''}{s.notes && <div class="uncertain">{s.notes}</div>}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      ) : (
+        <p class="empty">Sourcing details not yet documented.</p>
+      )}
+    </div>
+
+    {refined.length > 0 && (
+      <p><strong>Refines into:</strong> {refined.map((r, i) => (<>{i > 0 && ', '}{r.href ? <a href={r.href}>{r.name}</a> : r.name}</>))}</p>
+    )}
+    {m.usedInSummary && <p><strong>Used for:</strong> {m.usedInSummary}</p>}
+
+    {usedIn.length > 0 && (
+      <div class="panel">
+        <h2>Recipes using {m.name}</h2>
+        <div class="chips">
+          {usedIn.map((r) => <a class="pill clay" href={`/recipes/${r.id}`}>{r.name}</a>)}
+        </div>
+      </div>
+    )}
+
+    {foundIn.length > 0 && (
+      <p><strong>Found in:</strong> {foundIn.map((r, i) => (<>{i > 0 && ', '}<a href={`/regions/${r.id}`}>{r.name}</a></>))}</p>
+    )}
+
+    {inHabitats.length > 0 && (
+      <div class="panel">
+        <h2>Used in habitats</h2>
+        <div class="chips">
+          {inHabitats.map((h) => <a class="pill sky" href={`/habitats/${h.id}`}>{h.name}</a>)}
+        </div>
+      </div>
+    )}
+
+    {relatedTips.length > 0 && (
+      <div class="panel">
+        <h2>Related tips</h2>
+        <ul>
+          {relatedTips.map((t) => <li><a href={`/tips/${t.id}`}>{t.title}</a></li>)}
+        </ul>
+      </div>
+    )}
+  </article>
+</Base>

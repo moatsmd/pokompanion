@@ -1,0 +1,72 @@
+---
+import Base from '../../layouts/Base.astro';
+import { recipes, recipesById, itemsById, resolveRef, rawRollup, prettify } from '../../lib/data';
+
+export function getStaticPaths() {
+  return recipes.map((r) => ({ params: { id: r.id } }));
+}
+
+const { id } = Astro.params;
+const r = recipesById.get(id!)!;
+const output = itemsById.get(r.output);
+const rollup = rawRollup(r.ingredients ?? []);
+---
+
+<Base title={`${r.name} recipe — Pokompanion`} active="recipes" description={`How to craft ${r.name} in Pokémon Pokopia.`}>
+  <p class="crumb"><a href="/recipes">← Recipes</a></p>
+  <article data-pagefind-body>
+    <h1>{r.name}</h1>
+    <div class="chips">
+      {r.station && <span class="pill sky" data-pagefind-filter="station">{r.station}</span>}
+      <span class="pill" data-pagefind-filter="type">Recipe</span>
+    </div>
+
+    <dl class="kv">
+      <dt>Makes</dt>
+      <dd>{output ? <a href={`/items/${output.id}`}>{output.name}</a> : prettify(r.output)}{r.outputQty && r.outputQty > 1 ? ` × ${r.outputQty}` : ''}</dd>
+      {r.station && <><dt>Station</dt><dd>{prettify(r.station)}</dd></>}
+      {r.unlock && <><dt>Unlock</dt><dd>{r.unlock}</dd></>}
+      {r.effect && <><dt>Effect</dt><dd>{r.effect}</dd></>}
+    </dl>
+
+    <div class="panel">
+      <h2>Ingredients</h2>
+      {r.ingredients && r.ingredients.length ? (
+        <table>
+          <thead><tr><th>Material</th><th style="text-align:right">Qty</th></tr></thead>
+          <tbody>
+            {r.ingredients.map((g) => {
+              const ref = resolveRef(g.material);
+              return (
+                <tr>
+                  <td>{ref.href ? <a href={ref.href}>{ref.name}</a> : ref.name}</td>
+                  <td style="text-align:right">× {g.qty ?? 1}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      ) : (
+        <p class="empty">Ingredients not documented.</p>
+      )}
+    </div>
+    {rollup && (
+      <div class="panel">
+        <h2>Total raw materials</h2>
+        <table>
+          <thead><tr><th>Raw material</th><th style="text-align:right">Qty</th></tr></thead>
+          <tbody>
+            {rollup.map((row) => (
+              <tr>
+                <td>{row.href ? <a href={row.href}>{row.name}</a> : row.name}</td>
+                <td style="text-align:right">× {row.qty}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <p class="count-note">Refined ingredients expanded to their raw sources. Refine ratios aren't documented, so each refine step is counted 1:1 — treat as a guide, not exact.</p>
+      </div>
+    )}
+    {r.notes && <p class="uncertain">{r.notes}</p>}
+  </article>
+</Base>

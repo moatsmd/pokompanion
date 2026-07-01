@@ -1,0 +1,59 @@
+---
+import Base from '../layouts/Base.astro';
+import { counts } from '../lib/data';
+
+const cats = [
+  { href: '/materials', label: 'Materials', n: counts.materials, cls: 'leaf', blurb: 'Raw & refined resources and exactly how to source each one.' },
+  { href: '/items', label: 'Items', n: counts.items, cls: 'clay', blurb: 'Furniture, decor, kits, food and collectibles.' },
+  { href: '/recipes', label: 'Recipes', n: counts.recipes, cls: 'sky', blurb: 'What to craft, at which station, from which ingredients.' },
+  { href: '/regions', label: 'Regions', n: counts.regions, cls: 'leaf', blurb: 'Per-region guides: resources, landmarks and tools.' },
+  { href: '/habitats', label: 'Habitats', n: counts.habitats, cls: 'sky', blurb: 'What to place down to attract each Pokémon.' },
+  { href: '/pokemon', label: 'Pokémon', n: counts.pokemon, cls: 'leaf', blurb: 'Pick a Pokémon, see which habitats attract it.' },
+  { href: '/tools', label: 'Tools', n: counts.tools, cls: 'clay', blurb: 'Pokémon moves you use to shape the world and gather.' },
+  { href: '/tips', label: 'Efficiency Tips', n: counts.tips, cls: 'sky', blurb: 'Fastest ways to farm, earn, and use rare items.' },
+];
+---
+
+<Base title="Pokompanion — a Pokémon Pokopia compendium" active={undefined}>
+  <section class="hero">
+    <h1>Everything for your Pokopia town</h1>
+    <p class="lead">
+      Search and browse materials, item sourcing, crafting recipes and region
+      guides for <em>Pokémon Pokopia</em> — all in one cozy place.
+    </p>
+    <div id="home-search" class="home-search"></div>
+    <p class="count-note" id="search-fallback">
+      Type to search across {counts.materials + counts.items + counts.recipes + counts.regions + counts.habitats + counts.pokemon} entries.
+    </p>
+  </section>
+
+  <h2>Browse</h2>
+  <div class="grid">
+    {cats.map((c) => (
+      <a class="card" href={c.href}>
+        <h3>{c.label} <span class={`pill ${c.cls}`}>{c.n}</span></h3>
+        <p>{c.blurb}</p>
+      </a>
+    ))}
+  </div>
+
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet" />
+  <script is:inline>
+    // Pagefind assets only exist in the built site; harmless no-op in `astro dev`.
+    window.addEventListener('DOMContentLoaded', () => {
+      const s = document.createElement('script');
+      s.src = '/pagefind/pagefind-ui.js';
+      s.onload = () => {
+        new PagefindUI({ element: '#home-search', showSubResults: true, showImages: false, pageSize: 6 });
+        document.getElementById('search-fallback')?.remove();
+      };
+      document.head.appendChild(s);
+    });
+  </script>
+
+  <style>
+    .home-search { max-width: 40rem; margin: 0 auto; text-align: left; }
+    :global(.pagefind-ui) { --pagefind-ui-primary: var(--leaf-deep); --pagefind-ui-font: var(--font-body); --pagefind-ui-border-radius: 999px; }
+    :global(.pagefind-ui__search-input) { background: var(--surface); border-color: var(--border); color: var(--ink); }
+  </style>
+</Base>

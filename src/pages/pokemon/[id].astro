@@ -1,0 +1,52 @@
+---
+import Base from '../../layouts/Base.astro';
+import { pokemon, pokemonById, habitatsById, regionsById, resolveRef, prettify } from '../../lib/data';
+
+export function getStaticPaths() {
+  return pokemon.map((p) => ({ params: { id: p.id } }));
+}
+
+const { id } = Astro.params;
+const p = pokemonById.get(id!)!;
+
+// summarise a habitat's placement requirements as "4× Tall Grass, 1× Large Tree"
+function placeSummary(habitatId: string) {
+  const h = habitatsById.get(habitatId);
+  return (h?.requirements ?? []).map((r) => `${r.qty ?? 1}× ${resolveRef(r.item).name}`).join(', ');
+}
+---
+
+<Base title={`${p.name} — Pokompanion`} active="pokemon" description={`Which habitats attract ${p.name} in Pokémon Pokopia and how to build them.`}>
+  <p class="crumb"><a href="/pokemon">← Pokémon</a></p>
+  <article data-pagefind-body>
+    <h1>{p.name}</h1>
+    <div class="chips">
+      <span class="pill leaf" data-pagefind-filter="type">Pokémon</span>
+      {p.biomes.map((b) => <span class="pill sky">{b}</span>)}
+    </div>
+
+    <div class="panel">
+      <h2>Attracted by these habitats</h2>
+      <table>
+        <thead><tr><th>Habitat</th><th>What to place</th><th>Condition</th><th>Rarity</th></tr></thead>
+        <tbody>
+          {p.habitats.map((h) => (
+            <tr>
+              <td><a href={`/habitats/${h.id}`}>{h.name}</a></td>
+              <td>{placeSummary(h.id)}</td>
+              <td>{h.conditions || '—'}</td>
+              <td>{h.note || '—'}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    {p.regions.length > 0 && (
+      <p><strong>Related regions:</strong> {p.regions.map((rid, i) => {
+        const r = regionsById.get(rid);
+        return (<>{i > 0 && ', '}{r ? <a href={`/regions/${r.id}`}>{r.name}</a> : prettify(rid)}</>);
+      })}</p>
+    )}
+  </article>
+</Base>

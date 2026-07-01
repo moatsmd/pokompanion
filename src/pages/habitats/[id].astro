@@ -1,0 +1,67 @@
+---
+import Base from '../../layouts/Base.astro';
+import { habitats, habitatsById, regionsById, resolveRef, pokeId } from '../../lib/data';
+
+export function getStaticPaths() {
+  return habitats.map((h) => ({ params: { id: h.id } }));
+}
+
+const { id } = Astro.params;
+const h = habitatsById.get(id!)!;
+const region = h.region ? regionsById.get(h.region) : null;
+---
+
+<Base title={`${h.name} habitat — Pokompanion`} active="habitats" description={h.description ?? `How to build the ${h.name} habitat and which Pokémon it attracts.`}>
+  <p class="crumb"><a href="/habitats">← Habitats</a></p>
+  <article data-pagefind-body>
+    <h1>{h.name}</h1>
+    <div class="chips">
+      {h.biome && <span class="pill sky" data-pagefind-filter="biome">{h.biome}</span>}
+      {h.conditions && <span class="pill clay">{h.conditions}</span>}
+      <span class="pill" data-pagefind-filter="type">Habitat</span>
+    </div>
+    {h.description && <p class="lede">{h.description}</p>}
+
+    <div class="panel">
+      <h2>What to place</h2>
+      {h.requirements && h.requirements.length ? (
+        <table>
+          <thead><tr><th>Item</th><th style="text-align:right">Qty</th></tr></thead>
+          <tbody>
+            {h.requirements.map((r) => {
+              const ref = resolveRef(r.item);
+              return (
+                <tr>
+                  <td>
+                    {ref.href ? <a href={ref.href}>{ref.name}</a> : ref.name}
+                    {r.note && <div class="count-note">{r.note}</div>}
+                  </td>
+                  <td style="text-align:right">× {r.qty ?? 1}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      ) : (
+        <p class="empty">Requirements not yet documented.</p>
+      )}
+      {h.conditions && <p class="count-note">Condition: {h.conditions}.</p>}
+    </div>
+
+    <div class="panel">
+      <h2>Attracts</h2>
+      {h.attracts && h.attracts.length ? (
+        <div class="chips">
+          {h.attracts.map((a) => (
+            <a class="pill leaf" href={`/pokemon/${pokeId(a.pokemon)}`}>{a.pokemon}{a.note ? ` · ${a.note}` : ''}</a>
+          ))}
+        </div>
+      ) : (
+        <p class="empty">Attracted Pokémon not yet documented.</p>
+      )}
+    </div>
+
+    {region && <p><strong>Region:</strong> <a href={`/regions/${region.id}`}>{region.name}</a></p>}
+    {h.notes && <p class="uncertain">{h.notes}</p>}
+  </article>
+</Base>

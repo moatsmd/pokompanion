@@ -1,0 +1,66 @@
+---
+import Base from '../../layouts/Base.astro';
+import { regions, regionsById, toolsById, resolveRef, habitatsInRegion } from '../../lib/data';
+
+export function getStaticPaths() {
+  return regions.map((r) => ({ params: { id: r.id } }));
+}
+
+const { id } = Astro.params;
+const r = regionsById.get(id!)!;
+const resources = (r.keyResources ?? []).map(resolveRef);
+const regionTools = (r.toolsUsedHere ?? []).map((t) => toolsById.get(t)).filter(Boolean);
+const connects = (r.connectsTo ?? []).map((c) => regionsById.get(c)).filter(Boolean);
+const regionHabitats = habitatsInRegion(r.id);
+---
+
+<Base title={`${r.name} — Pokompanion`} active="regions" description={r.summary ?? `Guide to ${r.name} in Pokémon Pokopia.`}>
+  <p class="crumb"><a href="/regions">← Regions</a></p>
+  <article data-pagefind-body>
+    <h1>{r.name}</h1>
+    <div class="chips">
+      {r.order && <span class="pill leaf">Region #{r.order}</span>}
+      <span class="pill sky" data-pagefind-filter="type">Region</span>
+    </div>
+    {r.summary && <p class="lede">{r.summary}</p>}
+
+    {resources.length > 0 && (
+      <div class="panel">
+        <h2>Key resources</h2>
+        <div class="chips">
+          {resources.map((ref) => ref.href ? <a class="pill leaf" href={ref.href}>{ref.name}</a> : <span class="pill">{ref.name}</span>)}
+        </div>
+      </div>
+    )}
+
+    {r.notableLocations && r.notableLocations.length > 0 && (
+      <div class="panel">
+        <h2>Notable locations</h2>
+        <table>
+          <tbody>
+            {r.notableLocations.map((l) => (
+              <tr><td><strong>{l.name}</strong></td><td>{l.what ?? ''}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    )}
+
+    {regionHabitats.length > 0 && (
+      <div class="panel">
+        <h2>Habitats here</h2>
+        <div class="chips">
+          {regionHabitats.map((h) => <a class="pill sky" href={`/habitats/${h.id}`}>{h.name}</a>)}
+        </div>
+      </div>
+    )}
+
+    {regionTools.length > 0 && (
+      <p><strong>Tools used here:</strong> {regionTools.map((t, i) => (<>{i > 0 && ', '}<a href={`/tools#${t!.id}`}>{t!.name}</a></>))}</p>
+    )}
+    {connects.length > 0 && (
+      <p><strong>Connects to:</strong> {connects.map((c, i) => (<>{i > 0 && ', '}<a href={`/regions/${c!.id}`}>{c!.name}</a></>))}</p>
+    )}
+    {r.notes && <p class="uncertain">{r.notes}</p>}
+  </article>
+</Base>
