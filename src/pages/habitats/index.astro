@@ -20,7 +20,7 @@ const pokeList = (h) => (h.attracts ?? []).map((a) => a.pokemon).join(', ');
     <span class="count-note" id="count">{sorted.length} habitats</span>
   </div>
 
-  <div class="grid" id="list">
+  <div class="grid" id="list" data-noun="habitat">
     {sorted.map((h) => (
       <a
         class="card"
@@ -35,27 +35,5 @@ const pokeList = (h) => (h.attracts ?? []).map((a) => a.pokemon).join(', ');
   </div>
   <p class="empty" id="noresults" hidden>No habitats match your filter.</p>
 
-  <script is:inline>
-    (() => {
-      const q = document.getElementById('q');
-      const cat = document.getElementById('cat');
-      const cards = [...document.querySelectorAll('#list .card')];
-      const count = document.getElementById('count');
-      const none = document.getElementById('noresults');
-      function apply() {
-        const term = q.value.trim().toLowerCase();
-        const c = cat.value;
-        let shown = 0;
-        for (const el of cards) {
-          const ok = (!term || el.dataset.name.includes(term)) && (!c || el.dataset.cat === c);
-          el.hidden = !ok;
-          if (ok) shown++;
-        }
-        count.textContent = shown + ' habitat' + (shown === 1 ? '' : 's');
-        none.hidden = shown !== 0;
-      }
-      q.addEventListener('input', apply);
-      cat.addEventListener('change', apply);
-    })();
-  </script>
+  <script is:inline src="/browse.js"></script>
 </Base>

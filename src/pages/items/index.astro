@@ -19,7 +19,7 @@ const sorted = [...items].sort((a, b) => a.name.localeCompare(b.name));
     <span class="count-note" id="count">{sorted.length} items</span>
   </div>
 
-  <div class="grid" id="list">
+  <div class="grid" id="list" data-noun="item">
     {sorted.map((it) => (
       <a class="card" href={`/items/${it.id}`} data-name={it.name.toLowerCase()} data-cat={it.category ?? ''}>
         <h3>{it.name} {it.category && <span class="pill clay">{it.category}</span>}</h3>
@@ -29,27 +29,5 @@ const sorted = [...items].sort((a, b) => a.name.localeCompare(b.name));
   </div>
   <p class="empty" id="noresults" hidden>No items match your filter.</p>
 
-  <script is:inline>
-    (() => {
-      const q = document.getElementById('q');
-      const cat = document.getElementById('cat');
-      const cards = [...document.querySelectorAll('#list .card')];
-      const count = document.getElementById('count');
-      const none = document.getElementById('noresults');
-      function apply() {
-        const term = q.value.trim().toLowerCase();
-        const c = cat.value;
-        let shown = 0;
-        for (const el of cards) {
-          const ok = (!term || el.dataset.name.includes(term)) && (!c || el.dataset.cat === c);
-          el.hidden = !ok;
-          if (ok) shown++;
-        }
-        count.textContent = shown + ' item' + (shown === 1 ? '' : 's');
-        none.hidden = shown !== 0;
-      }
-      q.addEventListener('input', apply);
-      cat.addEventListener('change', apply);
-    })();
-  </script>
+  <script is:inline src="/browse.js"></script>
 </Base>
